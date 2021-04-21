@@ -27,9 +27,21 @@ namespace PoznajRzeszow.Infrastructure
         public DbSet<DbRating> Ratings { get; set; }
         public DbSet<DbUser> Users { get; set; }
         public DbSet<DbVisit> Visits { get; set; }
+        public DbSet<DbCategoryType> CategoryTypes { get; set; }
 
         protected override void  OnModelCreating(ModelBuilder builder)
         {
+            // CategoryType
+            builder
+                .Entity<DbCategoryType>()
+                .HasKey(x => x.CategoryTypeId);
+            builder
+                .Entity<DbCategoryType>()
+                .HasMany(x => x.Categories)
+                .WithOne(x => x.CategoryType)
+                .HasForeignKey(x => x.CategoryTypeId);
+
+
             // Event
             builder
                 .Entity<DbEvent>()
@@ -75,6 +87,11 @@ namespace PoznajRzeszow.Infrastructure
                 .HasMany(x => x.Places)
                 .WithOne(x => x.Category)
                 .HasForeignKey(x => x.CategoryId);
+            builder
+                .Entity<DbPlaceCategory>()
+                .HasOne(x => x.CategoryType)
+                .WithMany(x => x.Categories)
+                .HasForeignKey(x => x.CategoryTypeId);
 
             // Rating
             builder

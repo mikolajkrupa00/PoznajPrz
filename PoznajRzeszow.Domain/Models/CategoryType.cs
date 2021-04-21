@@ -6,20 +6,18 @@ using System.Threading.Tasks;
 
 namespace PoznajRzeszow.Domain.Models
 {
-    public class Category
+    public class CategoryType
     {
-        public Category(Guid categoryId, string name, Guid categoryTypeId)
+        public CategoryType( Guid categoryTypeId, string name)
         {
-            PlaceCategoryId = categoryId;
             Name = name;
             CategoryTypeId = categoryTypeId;
         }
 
-        public Guid PlaceCategoryId { get; set; }
         public Guid CategoryTypeId { get; set; }
         public string Name { get; set; }
 
-        public static Category Create(string name, Guid categoryTypeId)
-            => new Category(Guid.NewGuid(), name, categoryTypeId);
+        public static CategoryType Create(string name)
+            => new CategoryType(Guid.NewGuid(), name);
     }
 }

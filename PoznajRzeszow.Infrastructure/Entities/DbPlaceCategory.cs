@@ -16,13 +16,16 @@ namespace PoznajRzeszow.Infrastructure.Entities
 
         public Guid PlaceCategoryId { get; set; }
         public string Name { get; set; }
+        public Guid CategoryTypeId { get; set; }
+        public virtual DbCategoryType CategoryType { get; set; }
         public virtual ICollection<DbPlace> Places { get; set; }
 
         public static DbPlaceCategory Create(Category category)
             => new DbPlaceCategory
             {
                 PlaceCategoryId = category.PlaceCategoryId,
-                Name = category.Name
+                Name = category.Name,
+                CategoryTypeId =category.CategoryTypeId
             };
     }
 }

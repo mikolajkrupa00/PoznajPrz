@@ -9,7 +9,7 @@ namespace PoznajRzeszow.Application.Queries.Places.GetPlaces
     public class PlaceDto
     {
         public PlaceDto(Guid placeId, decimal latitude, decimal attitude, string name, string description, string address,
-            string categoryName, bool haveVisited, int zoom)
+            string categoryName, bool haveVisited, int zoom, string categoryTypeName)
         {
             PlaceId = placeId;
             Latitude = latitude;
@@ -20,6 +20,7 @@ namespace PoznajRzeszow.Application.Queries.Places.GetPlaces
             CategoryName = categoryName;
             HaveVisited = haveVisited;
             Zoom = zoom;
+            CategoryTypeName = categoryTypeName;
         }
 
         public Guid PlaceId { get; set; }
@@ -31,5 +32,6 @@ namespace PoznajRzeszow.Application.Queries.Places.GetPlaces
         public string CategoryName { get; set; }
         public bool HaveVisited { get; set; }
         public int Zoom { get; set; }
+        public string CategoryTypeName { get; set; }
     }
 }

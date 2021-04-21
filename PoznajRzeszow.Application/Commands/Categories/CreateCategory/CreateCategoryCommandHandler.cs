@@ -21,7 +21,7 @@ namespace PoznajRzeszow.Application.Commands.Categories.CreateCategory
 
         public async Task<CategoryDto> Handle(CreateCategoryCommand request, CancellationToken cancellationToken)
         {
-            var category = Category.Create(request.Name);
+            var category = Category.Create(request.Name, request.CategoryTypeId);
             await _categoryRepository.CreateAsync(category);
             return new CategoryDto(category.PlaceCategoryId);
         }

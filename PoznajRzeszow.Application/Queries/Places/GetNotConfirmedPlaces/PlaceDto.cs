@@ -9,7 +9,7 @@ namespace PoznajRzeszow.Application.Queries.Places.GetNotConfirmedPlaces
     public class PlaceDto
     {
         public PlaceDto(Guid placeId, string name, string description, string address,
-            string categoryName, int zoom)
+            string categoryName, int zoom, string categoryTypeName)
         {
             PlaceId = placeId;
             Name = name;
@@ -17,6 +17,7 @@ namespace PoznajRzeszow.Application.Queries.Places.GetNotConfirmedPlaces
             Address = address;
             CategoryName = categoryName;
             Zoom = zoom;
+            CategoryTypeName = categoryTypeName;
         }
 
         public Guid PlaceId { get; set; }
@@ -25,5 +26,6 @@ namespace PoznajRzeszow.Application.Queries.Places.GetNotConfirmedPlaces
         public string Address { get; set; }
         public string CategoryName { get; set; }
         public int Zoom { get; set; }
+        public string CategoryTypeName { get; set; }
     }
 }
