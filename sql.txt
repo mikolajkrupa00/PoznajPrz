@@ -17,6 +17,13 @@ INSERT INTO poznajrzeszow.categories values("2786facd-30d9-4a0b-853f-5169310be5e
 INSERT INTO poznajrzeszow.categories values("6a2e2856-c9c1-4ba7-8ac7-e890a70b02b1","restauracja", "0f697497-5f21-4f82-8397-33a84d571cf0");
 INSERT INTO poznajrzeszow.categories values("e726a7c9-d2b7-4bd3-98b7-16892482ccc3","rozrywka", "9f3a3b40-9ea8-4cd2-a5d8-7936896e1da5");
 INSERT INTO poznajrzeszow.categories values("676004d0-d53d-429a-885f-0ebb901270c1","pomnik", "70502e3f-7ea4-4ad9-8dd5-d1981b9229c8");
+INSERT INTO poznajrzeszow.categories values("3c228ec4-13f2-47e5-8be7-ffea05031b3f","pomnik2", "70502e3f-7ea4-4ad9-8dd5-d1981b9229c8");
+INSERT INTO poznajrzeszow.categories values("79b73b59-cbb2-451c-bb21-813558299b4d","pomnik3", "70502e3f-7ea4-4ad9-8dd5-d1981b9229c8");
+INSERT INTO poznajrzeszow.categories values("b37505e2-230e-4fbc-bf4a-44679fbd3052","pomnik4", "70502e3f-7ea4-4ad9-8dd5-d1981b9229c8");
+INSERT INTO poznajrzeszow.categories values("9cc6b930-a123-4101-bce6-9835b893fced","rozrywka2", "9f3a3b40-9ea8-4cd2-a5d8-7936896e1da5");
+INSERT INTO poznajrzeszow.categories values("add123a1-2c35-4e1a-a6b8-2fb80ebe41c3","rozrywka3", "9f3a3b40-9ea8-4cd2-a5d8-7936896e1da5");
+INSERT INTO poznajrzeszow.categories values("638291f2-3197-4bdc-a9e3-6e90201335ff","restauracja2", "0f697497-5f21-4f82-8397-33a84d571cf0");
+
 
 INSERT INTO poznajrzeszow.places values("e6b82072-f224-4f82-929d-3b03c0b5053d",22.0132155,50.0532419,"Stadion CWKS Resovia","Opis obiektu","adres 213","b8699d71-9e37-460d-8d26-634e883f85d0",1, 10 );
 INSERT INTO poznajrzeszow.places values("98043b76-3c53-4d82-8f26-64508fe0703e",21.9994837,50.0232572,"Stadion Miejski","Opis obiektu","ul.Nieznana 313","b8699d71-9e37-460d-8d26-634e883f85d0",1, 11 );
