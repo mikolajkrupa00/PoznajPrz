@@ -35,7 +35,7 @@ namespace PoznajRzeszow.Infrastructure.Repositories
         public async Task<Rating> GetAsync(Guid ratingId)
             => await (from r in _context.Ratings
                       where r.RatingId == ratingId
-                      select new Rating(r.RatingId, r.RatingDate, r.Comment, r.Value, r.PlaceId, r.UserId))
+                      select new Rating(r.RatingId, r.RatingDate, r.Comment, r.Value, r.PlaceId, r.UserId, r.FilePath))
             .FirstAsync();
 
         public async Task UpdateAsync(Rating rating)

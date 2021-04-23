@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,5 +15,6 @@ namespace PoznajRzeszow.Application.Commands.Ratings.CreateRating
         public int Value { get; set; }
         public Guid PlaceId { get; set; }
         public Guid UserId { get; set; }
+        public IFormFile File { get; set; }
     }
 }
