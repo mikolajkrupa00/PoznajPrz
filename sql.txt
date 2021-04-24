@@ -5,6 +5,7 @@ INSERT INTO poznajrzeszow.users values("50c26662-4930-479c-9c65-f0ac5f25dfce","u
 INSERT INTO poznajrzeszow.users values("22774c51-e069-4fe5-b124-71be09f15a77","user4@gmail.com","user4","EvJzSmkHftSkztDJHz3VoQ+cZc0S5XO62HdsbeAnNuo=","iHZhnCTUmoNE0l7t1Z1u+g==",1);
 INSERT INTO poznajrzeszow.users values("aed59bcd-649c-4ed7-8654-3f441eb5c666","user5@gmail.com","user5","kpQpBhqtMaRlT7ZPf6HOvNBm1/vU5oRf1sYs3StqPPs=","wGtJr6JYLXb7hH5yKO/aBQ==",1);
 
+
 INSERT INTO poznajrzeszow.categorytypes values("fc59e7f3-b71b-474b-9eba-401f1f71d908","Sport");
 INSERT INTO poznajrzeszow.categorytypes values("c450fe81-4009-41d2-9331-8bd3849a12c6","Kultura");
 INSERT INTO poznajrzeszow.categorytypes values("0f697497-5f21-4f82-8397-33a84d571cf0","Restauracje");
@@ -29,17 +30,9 @@ INSERT INTO poznajrzeszow.categories values("5df6b556-7d3c-4df1-a7e3-df34f7482cd
 INSERT INTO poznajrzeszow.categories values("b63b8450-d3a0-4c0a-a8d2-4404c71f2995","taniec", "9f3a3b40-9ea8-4cd2-a5d8-7936896e1da5");
 INSERT INTO poznajrzeszow.categories values("88ab9a06-a65d-4853-a6d0-3489569a74f0","kabarety", "9f3a3b40-9ea8-4cd2-a5d8-7936896e1da5");
 INSERT INTO poznajrzeszow.categories values("676004d0-d53d-429a-885f-0ebb901270c1","pomnik", "70502e3f-7ea4-4ad9-8dd5-d1981b9229c8");
-
 INSERT INTO poznajrzeszow.categories values("9505a228-5ca9-43db-8b60-513f8a4783b9","zamki", "70502e3f-7ea4-4ad9-8dd5-d1981b9229c8");
 INSERT INTO poznajrzeszow.categories values("398a141b-6f7b-4bab-b2e4-3d924a011b86","palace", "70502e3f-7ea4-4ad9-8dd5-d1981b9229c8");
 INSERT INTO poznajrzeszow.categories values("c34522b7-52e0-4f44-b28f-0493e83e679c","kamienice", "70502e3f-7ea4-4ad9-8dd5-d1981b9229c8");
-
-INSERT INTO poznajrzeszow.categories values("3c228ec4-13f2-47e5-8be7-ffea05031b3f","pomnik2", "70502e3f-7ea4-4ad9-8dd5-d1981b9229c8");
-INSERT INTO poznajrzeszow.categories values("79b73b59-cbb2-451c-bb21-813558299b4d","pomnik3", "70502e3f-7ea4-4ad9-8dd5-d1981b9229c8");
-INSERT INTO poznajrzeszow.categories values("b37505e2-230e-4fbc-bf4a-44679fbd3052","pomnik4", "70502e3f-7ea4-4ad9-8dd5-d1981b9229c8");
-INSERT INTO poznajrzeszow.categories values("9cc6b930-a123-4101-bce6-9835b893fced","rozrywka2", "9f3a3b40-9ea8-4cd2-a5d8-7936896e1da5");
-INSERT INTO poznajrzeszow.categories values("add123a1-2c35-4e1a-a6b8-2fb80ebe41c3","rozrywka3", "9f3a3b40-9ea8-4cd2-a5d8-7936896e1da5");
-INSERT INTO poznajrzeszow.categories values("638291f2-3197-4bdc-a9e3-6e90201335ff","restauracja2", "0f697497-5f21-4f82-8397-33a84d571cf0");
 
 
 INSERT INTO poznajrzeszow.places values("e6b82072-f224-4f82-929d-3b03c0b5053d",22.0132155,50.0532419,"Stadion CWKS Resovia","Opis obiektu","ul.Wyspiańskiego 22","b8699d71-9e37-460d-8d26-634e883f85d0",1, 10 );
@@ -72,6 +65,7 @@ INSERT INTO poznajrzeszow.visits values("a5dc24d1-0652-4003-b01e-f749c1743a89","
 INSERT INTO poznajrzeszow.visits values("d0f7b842-f0e1-45e3-acca-ed104932e0c0","2021-01-11 10:12:13.608000","aed59bcd-649c-4ed7-8654-3f441eb5c666","e6b82072-f224-4f82-929d-3b03c0b5053d" );
 INSERT INTO poznajrzeszow.visits values("540d4f27-4868-4c92-8f31-3635043d5fa8","2021-01-19 01:11:13.608000","aed59bcd-649c-4ed7-8654-3f441eb5c666","31d23db1-b90f-4383-8941-4a1e1ed22092" );
 
+
 INSERT INTO poznajrzeszow.friends values("1c45f396-84f8-49cb-9d1b-849de68cdd0d", "22774c51-e069-4fe5-b124-71be09f15a77", 0);
 INSERT INTO poznajrzeszow.friends values("1c45f396-84f8-49cb-9d1b-849de68cdd0d", "aed59bcd-649c-4ed7-8654-3f441eb5c666", 0);
 INSERT INTO poznajrzeszow.friends values("f1b7b9af-259f-4720-9c19-4d863c8da2b9", "1c45f396-84f8-49cb-9d1b-849de68cdd0d", 0);
@@ -96,7 +90,6 @@ INSERT INTO poznajrzeszow.ratings values("5af01d77-a119-43c9-912d-2a3da177d921",
 INSERT INTO poznajrzeszow.ratings values("e545eb21-5e10-48ef-81f3-8c6f85815ee7", "2021-11-22 09:18:13.608000","<h1>kom8</h1>komentarz gsadvg<h3>aaaaaaaaaa</h3>",1, "0552796e-a453-4d8e-b1bd-c3775df62046", "1c45f396-84f8-49cb-9d1b-849de68cdd0d", null);
 INSERT INTO poznajrzeszow.ratings values("d3bb1188-8d42-4867-bd5e-db57bda77254", "2021-10-22 09:18:13.608000","<h1>kom9</h1><h2>komenatrz</h2>komensdtarz gfdg",3, "a79fc53a-fc94-41ac-8768-1739a5a6e249", "f1b7b9af-259f-4720-9c19-4d863c8da2b9", null);
 INSERT INTO poznajrzeszow.ratings values("39e7ce46-6203-4022-b64a-b5833ff34ab1", "2021-12-23 09:18:13.608000","<h1>kom</h1><h2>komenatrz</h2><h3>aaaaaaaaaa</h3>",7, "6e751a55-03c7-40d3-8b17-924120dbbaec", "aed59bcd-649c-4ed7-8654-3f441eb5c666", null);
-
 
 INSERT INTO poznajrzeszow.ratings values("a2a05d58-d132-4630-afec-e6b23fedca01", "2021-11-08 09:18:13.608000","<h1>kwqdw</h1><h2>komenatrz</h2><h3>aaaaaaaaaa</h3>",2, "f2a36daf-528c-4bf3-ab2c-e60568dbf888", "1c45f396-84f8-49cb-9d1b-849de68cdd0d", null);
 INSERT INTO poznajrzeszow.ratings values("f104aeee-e76b-46b0-95d1-035b4388ef8c", "2021-04-01 09:18:13.608000","<h1>kom12</h1><h2>komsadatrz</h2><h3>aaaaaaaaaa</h3>",5, "e6b82072-f224-4f82-929d-3b03c0b5053d", "f1b7b9af-259f-4720-9c19-4d863c8da2b9", null);
