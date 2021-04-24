@@ -1,31 +1,39 @@
-INSERT INTO `categorytypes` (`CategoryTypeId`, `Name`) VALUES
-('b8699d71-9e37-460d-8d26-634e883f85d0', 'Testowy');
+INSERT INTO poznajrzeszow.users values("1c45f396-84f8-49cb-9d1b-849de68cdd0d","admin@gmail.com","admin","3Aoh07nPqa2tdMbb2uHeozSuEltK23e6NUNjVO8gVfI=","SYuSIkJC0GfZHDg4YjGtKQ==",0);
+INSERT INTO poznajrzeszow.users values("f1b7b9af-259f-4720-9c19-4d863c8da2b9","user1@gmail.com","user1","sbw83kHAh59sFwNqqyxzpSs4yx/nCPm4QqaE/7Yv+sY=","PoB9Hk/N/FlkK9u7jN5Ryg==",1);
+INSERT INTO poznajrzeszow.users values("74ea1f61-e7c3-4010-b2f6-7c75e4775182","user2@gmail.com","user2","s8cCL1EZ+wCGjX3pmCK/Bq6dFHc7rPeN9C0C6QxBpoM=","gaWJaJtXhuGSnPsOdjuVzw==",1);
+INSERT INTO poznajrzeszow.users values("50c26662-4930-479c-9c65-f0ac5f25dfce","user3@gmail.com","user3","qn5dEifq4zilhYQMGMI/6Vci5jys81CQvy4V8LxIYNg=","vIHd9JfgVw5pUnwrpZqL1g==",1);
+INSERT INTO poznajrzeszow.users values("22774c51-e069-4fe5-b124-71be09f15a77","user4@gmail.com","user4","EvJzSmkHftSkztDJHz3VoQ+cZc0S5XO62HdsbeAnNuo=","iHZhnCTUmoNE0l7t1Z1u+g==",1);
+INSERT INTO poznajrzeszow.users values("aed59bcd-649c-4ed7-8654-3f441eb5c666","user5@gmail.com","user5","kpQpBhqtMaRlT7ZPf6HOvNBm1/vU5oRf1sYs3StqPPs=","wGtJr6JYLXb7hH5yKO/aBQ==",1);
 
-<<<<<<< HEAD
-=======
 
 INSERT INTO poznajrzeszow.categorytypes values("fc59e7f3-b71b-474b-9eba-401f1f71d908","Sport");
 INSERT INTO poznajrzeszow.categorytypes values("c450fe81-4009-41d2-9331-8bd3849a12c6","Kultura");
 INSERT INTO poznajrzeszow.categorytypes values("0f697497-5f21-4f82-8397-33a84d571cf0","Restauracje");
 INSERT INTO poznajrzeszow.categorytypes values("9f3a3b40-9ea8-4cd2-a5d8-7936896e1da5","Rozrywka");
 INSERT INTO poznajrzeszow.categorytypes values("70502e3f-7ea4-4ad9-8dd5-d1981b9229c8","Zabytki");
->>>>>>> a723141b03589892704d209aeca67c74bf051d28
-
-INSERT INTO users values("1c45f396-84f8-49cb-9d1b-849de68cdd0d","admin@gmail.com","admin","3Aoh07nPqa2tdMbb2uHeozSuEltK23e6NUNjVO8gVfI=","SYuSIkJC0GfZHDg4YjGtKQ==",0);
-INSERT INTO users values("f1b7b9af-259f-4720-9c19-4d863c8da2b9","user1@gmail.com","user1","sbw83kHAh59sFwNqqyxzpSs4yx/nCPm4QqaE/7Yv+sY=","PoB9Hk/N/FlkK9u7jN5Ryg==",1);
-INSERT INTO users values("74ea1f61-e7c3-4010-b2f6-7c75e4775182","user2@gmail.com","user2","s8cCL1EZ+wCGjX3pmCK/Bq6dFHc7rPeN9C0C6QxBpoM=","gaWJaJtXhuGSnPsOdjuVzw==",1);
-INSERT INTO users values("50c26662-4930-479c-9c65-f0ac5f25dfce","user3@gmail.com","user3","qn5dEifq4zilhYQMGMI/6Vci5jys81CQvy4V8LxIYNg=","vIHd9JfgVw5pUnwrpZqL1g==",1);
-INSERT INTO users values("22774c51-e069-4fe5-b124-71be09f15a77","user4@gmail.com","user4","EvJzSmkHftSkztDJHz3VoQ+cZc0S5XO62HdsbeAnNuo=","iHZhnCTUmoNE0l7t1Z1u+g==",1);
-INSERT INTO users values("aed59bcd-649c-4ed7-8654-3f441eb5c666","user5@gmail.com","user5","kpQpBhqtMaRlT7ZPf6HOvNBm1/vU5oRf1sYs3StqPPs=","wGtJr6JYLXb7hH5yKO/aBQ==",1);
 
 
-<<<<<<< HEAD
-INSERT INTO categories values("b8699d71-9e37-460d-8d26-634e883f85d0","sport","b8699d71-9e37-460d-8d26-634e883f85d0");
-INSERT INTO categories values("2786facd-30d9-4a0b-853f-5169310be5eb","muzeum","b8699d71-9e37-460d-8d26-634e883f85d0");
-INSERT INTO categories values("6a2e2856-c9c1-4ba7-8ac7-e890a70b02b1","restauracja","b8699d71-9e37-460d-8d26-634e883f85d0");
-INSERT INTO categories values("e726a7c9-d2b7-4bd3-98b7-16892482ccc3","rozrywka","b8699d71-9e37-460d-8d26-634e883f85d0");
-INSERT INTO categories values("676004d0-d53d-429a-885f-0ebb901270c1","pomnik","b8699d71-9e37-460d-8d26-634e883f85d0");
-=======
+INSERT INTO poznajrzeszow.categories values("b8699d71-9e37-460d-8d26-634e883f85d0","sport", "fc59e7f3-b71b-474b-9eba-401f1f71d908");
+INSERT INTO poznajrzeszow.categories values("1de62a75-8711-452e-9573-67b620bbb83e","piłka nożna", "fc59e7f3-b71b-474b-9eba-401f1f71d908");
+INSERT INTO poznajrzeszow.categories values("6a28e8b8-4d99-46df-86da-f0e982f478c1","siatkówka", "fc59e7f3-b71b-474b-9eba-401f1f71d908");
+INSERT INTO poznajrzeszow.categories values("8d5142f6-2380-48a2-9558-bb3039e2a0d0","koszykówka", "fc59e7f3-b71b-474b-9eba-401f1f71d908");
+INSERT INTO poznajrzeszow.categories values("2786facd-30d9-4a0b-853f-5169310be5eb","muzeum", "c450fe81-4009-41d2-9331-8bd3849a12c6");
+INSERT INTO poznajrzeszow.categories values("e7b7266b-1551-4adb-83c1-372de66ef325","kina", "c450fe81-4009-41d2-9331-8bd3849a12c6");
+INSERT INTO poznajrzeszow.categories values("5a549b76-2294-484f-a227-40d253df99e0","teatry", "c450fe81-4009-41d2-9331-8bd3849a12c6");
+INSERT INTO poznajrzeszow.categories values("94d8eb37-b175-4d39-b8f8-5725a6b8d339","filharmonia", "c450fe81-4009-41d2-9331-8bd3849a12c6");
+INSERT INTO poznajrzeszow.categories values("6a2e2856-c9c1-4ba7-8ac7-e890a70b02b1","restauracja", "0f697497-5f21-4f82-8397-33a84d571cf0");
+INSERT INTO poznajrzeszow.categories values("eaf9a126-c4e0-4306-9129-09ad76ea8db8","bar", "0f697497-5f21-4f82-8397-33a84d571cf0");
+INSERT INTO poznajrzeszow.categories values("0683a964-2672-4032-89a7-b56204b00546","pub", "0f697497-5f21-4f82-8397-33a84d571cf0");
+INSERT INTO poznajrzeszow.categories values("1d8f0f4a-6f99-4f6d-b8ef-3fd852a8f48d","kawiarnia", "0f697497-5f21-4f82-8397-33a84d571cf0");
+INSERT INTO poznajrzeszow.categories values("e726a7c9-d2b7-4bd3-98b7-16892482ccc3","rozrywka", "9f3a3b40-9ea8-4cd2-a5d8-7936896e1da5");
+INSERT INTO poznajrzeszow.categories values("5df6b556-7d3c-4df1-a7e3-df34f7482cde","kluby nocne", "9f3a3b40-9ea8-4cd2-a5d8-7936896e1da5");
+INSERT INTO poznajrzeszow.categories values("b63b8450-d3a0-4c0a-a8d2-4404c71f2995","taniec", "9f3a3b40-9ea8-4cd2-a5d8-7936896e1da5");
+INSERT INTO poznajrzeszow.categories values("88ab9a06-a65d-4853-a6d0-3489569a74f0","kabarety", "9f3a3b40-9ea8-4cd2-a5d8-7936896e1da5");
+INSERT INTO poznajrzeszow.categories values("676004d0-d53d-429a-885f-0ebb901270c1","pomnik", "70502e3f-7ea4-4ad9-8dd5-d1981b9229c8");
+INSERT INTO poznajrzeszow.categories values("9505a228-5ca9-43db-8b60-513f8a4783b9","zamki", "70502e3f-7ea4-4ad9-8dd5-d1981b9229c8");
+INSERT INTO poznajrzeszow.categories values("398a141b-6f7b-4bab-b2e4-3d924a011b86","palace", "70502e3f-7ea4-4ad9-8dd5-d1981b9229c8");
+INSERT INTO poznajrzeszow.categories values("c34522b7-52e0-4f44-b28f-0493e83e679c","kamienice", "70502e3f-7ea4-4ad9-8dd5-d1981b9229c8");
+
 
 INSERT INTO poznajrzeszow.places values("e6b82072-f224-4f82-929d-3b03c0b5053d",22.0132155,50.0532419,"Stadion CWKS Resovia","Opis obiektu","ul.Wyspiańskiego 22","b8699d71-9e37-460d-8d26-634e883f85d0",1, 10 );
 INSERT INTO poznajrzeszow.places values("98043b76-3c53-4d82-8f26-64508fe0703e",21.9994837,50.0232572,"Stadion Miejski","Opis obiektu","ul.Hetmańska 69","b8699d71-9e37-460d-8d26-634e883f85d0",1, 11 );
@@ -42,34 +50,21 @@ INSERT INTO poznajrzeszow.places values("44e3d088-9233-44c6-aa7b-d5987035b86c",2
 INSERT INTO poznajrzeszow.places values("9f90f35c-9ec5-493f-9ef8-f46aaf744f78",21.9915268,50.0334685,"Pomnik Jana Pawła II","Opis obiektu","ul.Marszałkowska 15","676004d0-d53d-429a-885f-0ebb901270c1",1,10 );
 INSERT INTO poznajrzeszow.places values("f2a36daf-528c-4bf3-ab2c-e60568dbf888",21.9763603,50.0492557,"Pomnik Ł.Cieplińskiego","Opis obiektu","ul.Łukasza Cieplińskiego 53","676004d0-d53d-429a-885f-0ebb901270c1",1,11 );
 INSERT INTO poznajrzeszow.places values("091fceb8-405d-4706-a237-3255e20a9eee",21.9917575,50.0435747,"Pomnik A.Mickiewicza","Opis obiektu","ul.Adama Mickiewicza 23","676004d0-d53d-429a-885f-0ebb901270c1",1,12 );
->>>>>>> a723141b03589892704d209aeca67c74bf051d28
 
-INSERT INTO places values("e6b82072-f224-4f82-929d-3b03c0b5053d",22.000,50.030,"sport1","sport11","adres 213","b8699d71-9e37-460d-8d26-634e883f85d0",1, 1);
-INSERT INTO places values("98043b76-3c53-4d82-8f26-64508fe0703e",22.001,50.032,"sport2","sport22","adres 313","b8699d71-9e37-460d-8d26-634e883f85d0",1, 1);
-INSERT INTO places values("a79fc53a-fc94-41ac-8768-1739a5a6e249",22.003,50.035,"muzeum","sport11","adres 523","2786facd-30d9-4a0b-853f-5169310be5eb",1, 1);
-INSERT INTO places values("31d23db1-b90f-4383-8941-4a1e1ed22092",22.007,50.039,"muzeum","sport22","adres 283","2786facd-30d9-4a0b-853f-5169310be5eb",1, 1);
-INSERT INTO places values("6e751a55-03c7-40d3-8b17-924120dbbaec",22.009,50.039,"restauracja1","restauracja11","adres 453","6a2e2856-c9c1-4ba7-8ac7-e890a70b02b1",1, 1);
-INSERT INTO places values("6049cf1c-6101-41c5-bb19-e4e463d18bd0",22.010,50.040,"restauracja2","restauracja22","adres 753","6a2e2856-c9c1-4ba7-8ac7-e890a70b02b1",1, 1);
-INSERT INTO places values("0552796e-a453-4d8e-b1bd-c3775df62046",22.011,50.045,"rozrywka1","rozrywka11","adres 653","e726a7c9-d2b7-4bd3-98b7-16892482ccc3",1, 1);
-INSERT INTO places values("a27d4b30-aefc-400c-9842-1f391935473d",22.015,50.040,"rozrywka2","rozrywka22","adres 913","e726a7c9-d2b7-4bd3-98b7-16892482ccc3",1, 1);
-INSERT INTO places values("9f90f35c-9ec5-493f-9ef8-f46aaf744f78",22.017,50.042,"pomnik1","pomnik11","adres 13","676004d0-d53d-429a-885f-0ebb901270c1",1, 1);
-INSERT INTO places values("f2a36daf-528c-4bf3-ab2c-e60568dbf888",22.019,50.048,"pomnik2","pomnik22","adres 53","676004d0-d53d-429a-885f-0ebb901270c1",1, 1);
+INSERT INTO poznajrzeszow.visits values("993s3195-7633-4af3-9778-d90a46c99574","2021-04-20 09:18:13.608000","f1b7b9af-259f-4720-9c19-4d863c8da2b9","e6b82072-f224-4f82-929d-3b03c0b5053d" );
+INSERT INTO poznajrzeszow.visits values("ced1f18a-047e-4b83-b4e9-4a4a4d3156c4","2021-04-19 11:15:13.608000","1c45f396-84f8-49cb-9d1b-849de68cdd0d","98043b76-3c53-4d82-8f26-64508fe0703e" );
+INSERT INTO poznajrzeszow.visits values("2318a822-a8cc-42e0-8a06-070b4ef15e6b","2021-04-19 08:18:13.608000","f1b7b9af-259f-4720-9c19-4d863c8da2b9","98043b76-3c53-4d82-8f26-64508fe0703e" );
+INSERT INTO poznajrzeszow.visits values("996be0eb-4f19-4075-bad2-f894f621e3c1","2021-04-15 05:17:13.608000","1c45f396-84f8-49cb-9d1b-849de68cdd0d","e6b82072-f224-4f82-929d-3b03c0b5053d" );
+INSERT INTO poznajrzeszow.visits values("d84f2e60-33f2-49c9-8fef-fe31e14e87be","2021-03-14 04:58:13.608000","1c45f396-84f8-49cb-9d1b-849de68cdd0d","0552796e-a453-4d8e-b1bd-c3775df62046" );
+INSERT INTO poznajrzeszow.visits values("0624f15d-3fa0-4881-bc0d-c7ac40b1c06d","2021-02-12 08:48:13.608000","74ea1f61-e7c3-4010-b2f6-7c75e4775182","e6b82072-f224-4f82-929d-3b03c0b5053d" );
+INSERT INTO poznajrzeszow.visits values("a5d84fa5-6c5e-4d07-ac4d-c0b5508a28fb","2021-04-13 08:38:13.608000","50c26662-4930-479c-9c65-f0ac5f25dfce","e6b82072-f224-4f82-929d-3b03c0b5053d" );
+INSERT INTO poznajrzeszow.visits values("995a8880-4ca1-416e-b8aa-9a7594cde1bd","2021-02-17 11:18:13.608000","74ea1f61-e7c3-4010-b2f6-7c75e4775182","e6b82072-f224-4f82-929d-3b03c0b5053d" );
+INSERT INTO poznajrzeszow.visits values("00c5b774-3f50-4958-9a22-369a6014a22b","2021-02-15 08:28:13.608000","74ea1f61-e7c3-4010-b2f6-7c75e4775182","e6b82072-f224-4f82-929d-3b03c0b5053d" );
+INSERT INTO poznajrzeszow.visits values("b9de800a-c870-4eaa-81bd-6449ae3ee52c","2021-03-12 02:18:13.608000","22774c51-e069-4fe5-b124-71be09f15a77","f2a36daf-528c-4bf3-ab2c-e60568dbf888" );
+INSERT INTO poznajrzeszow.visits values("a5dc24d1-0652-4003-b01e-f749c1743a89","2021-04-14 03:20:13.608000","74ea1f61-e7c3-4010-b2f6-7c75e4775182","31d23db1-b90f-4383-8941-4a1e1ed22092" );
+INSERT INTO poznajrzeszow.visits values("d0f7b842-f0e1-45e3-acca-ed104932e0c0","2021-01-11 10:12:13.608000","aed59bcd-649c-4ed7-8654-3f441eb5c666","e6b82072-f224-4f82-929d-3b03c0b5053d" );
+INSERT INTO poznajrzeszow.visits values("540d4f27-4868-4c92-8f31-3635043d5fa8","2021-01-19 01:11:13.608000","aed59bcd-649c-4ed7-8654-3f441eb5c666","31d23db1-b90f-4383-8941-4a1e1ed22092" );
 
-<<<<<<< HEAD
-INSERT INTO visits values("993s3195-7633-4af3-9778-d90a46c99574","2021-04-20 09:18:13.608000","f1b7b9af-259f-4720-9c19-4d863c8da2b9","e6b82072-f224-4f82-929d-3b03c0b5053d" );
-INSERT INTO visits values("ced1f18a-047e-4b83-b4e9-4a4a4d3156c4","2021-04-19 11:15:13.608000","1c45f396-84f8-49cb-9d1b-849de68cdd0d","98043b76-3c53-4d82-8f26-64508fe0703e" );
-INSERT INTO visits values("2318a822-a8cc-42e0-8a06-070b4ef15e6b","2021-04-19 08:18:13.608000","f1b7b9af-259f-4720-9c19-4d863c8da2b9","98043b76-3c53-4d82-8f26-64508fe0703e" );
-INSERT INTO visits values("996be0eb-4f19-4075-bad2-f894f621e3c1","2021-04-15 05:17:13.608000","1c45f396-84f8-49cb-9d1b-849de68cdd0d","e6b82072-f224-4f82-929d-3b03c0b5053d" );
-INSERT INTO visits values("d84f2e60-33f2-49c9-8fef-fe31e14e87be","2021-03-14 04:58:13.608000","1c45f396-84f8-49cb-9d1b-849de68cdd0d","0552796e-a453-4d8e-b1bd-c3775df62046" );
-INSERT INTO visits values("0624f15d-3fa0-4881-bc0d-c7ac40b1c06d","2021-02-12 08:48:13.608000","74ea1f61-e7c3-4010-b2f6-7c75e4775182","e6b82072-f224-4f82-929d-3b03c0b5053d" );
-INSERT INTO visits values("a5d84fa5-6c5e-4d07-ac4d-c0b5508a28fb","2021-04-13 08:38:13.608000","50c26662-4930-479c-9c65-f0ac5f25dfce","e6b82072-f224-4f82-929d-3b03c0b5053d" );
-INSERT INTO visits values("995a8880-4ca1-416e-b8aa-9a7594cde1bd","2021-02-17 11:18:13.608000","74ea1f61-e7c3-4010-b2f6-7c75e4775182","e6b82072-f224-4f82-929d-3b03c0b5053d" );
-INSERT INTO visits values("00c5b774-3f50-4958-9a22-369a6014a22b","2021-02-15 08:28:13.608000","74ea1f61-e7c3-4010-b2f6-7c75e4775182","e6b82072-f224-4f82-929d-3b03c0b5053d" );
-INSERT INTO visits values("b9de800a-c870-4eaa-81bd-6449ae3ee52c","2021-03-12 02:18:13.608000","22774c51-e069-4fe5-b124-71be09f15a77","f2a36daf-528c-4bf3-ab2c-e60568dbf888" );
-INSERT INTO visits values("a5dc24d1-0652-4003-b01e-f749c1743a89","2021-04-14 03:20:13.608000","74ea1f61-e7c3-4010-b2f6-7c75e4775182","31d23db1-b90f-4383-8941-4a1e1ed22092" );
-INSERT INTO visits values("d0f7b842-f0e1-45e3-acca-ed104932e0c0","2021-01-11 10:12:13.608000","aed59bcd-649c-4ed7-8654-3f441eb5c666","e6b82072-f224-4f82-929d-3b03c0b5053d" );
-INSERT INTO visits values("540d4f27-4868-4c92-8f31-3635043d5fa8","2021-01-19 01:11:13.608000","aed59bcd-649c-4ed7-8654-3f441eb5c666","31d23db1-b90f-4383-8941-4a1e1ed22092" );
-=======
 
 INSERT INTO poznajrzeszow.friends values("1c45f396-84f8-49cb-9d1b-849de68cdd0d", "22774c51-e069-4fe5-b124-71be09f15a77", 0);
 INSERT INTO poznajrzeszow.friends values("1c45f396-84f8-49cb-9d1b-849de68cdd0d", "aed59bcd-649c-4ed7-8654-3f441eb5c666", 0);
@@ -83,58 +78,8 @@ INSERT INTO poznajrzeszow.friends values("74ea1f61-e7c3-4010-b2f6-7c75e4775182",
 INSERT INTO poznajrzeszow.friends values("22774c51-e069-4fe5-b124-71be09f15a77", "74ea1f61-e7c3-4010-b2f6-7c75e4775182", 1);
 INSERT INTO poznajrzeszow.friends values("aed59bcd-649c-4ed7-8654-3f441eb5c666", "74ea1f61-e7c3-4010-b2f6-7c75e4775182", 1);
 INSERT INTO poznajrzeszow.friends values("22774c51-e069-4fe5-b124-71be09f15a77", "aed59bcd-649c-4ed7-8654-3f441eb5c666", 1);
->>>>>>> a723141b03589892704d209aeca67c74bf051d28
-
-INSERT INTO friends values("1c45f396-84f8-49cb-9d1b-849de68cdd0d", "22774c51-e069-4fe5-b124-71be09f15a77", 0);
-INSERT INTO friends values("1c45f396-84f8-49cb-9d1b-849de68cdd0d", "aed59bcd-649c-4ed7-8654-3f441eb5c666", 0);
-INSERT INTO friends values("f1b7b9af-259f-4720-9c19-4d863c8da2b9", "1c45f396-84f8-49cb-9d1b-849de68cdd0d", 0);
-INSERT INTO friends values("50c26662-4930-479c-9c65-f0ac5f25dfce", "1c45f396-84f8-49cb-9d1b-849de68cdd0d", 0);
-INSERT INTO friends values("f1b7b9af-259f-4720-9c19-4d863c8da2b9", "74ea1f61-e7c3-4010-b2f6-7c75e4775182", 1);
-INSERT INTO friends values("f1b7b9af-259f-4720-9c19-4d863c8da2b9", "22774c51-e069-4fe5-b124-71be09f15a77", 1);
-INSERT INTO friends values("22774c51-e069-4fe5-b124-71be09f15a77", "f1b7b9af-259f-4720-9c19-4d863c8da2b9", 1);
-INSERT INTO friends values("aed59bcd-649c-4ed7-8654-3f441eb5c666", "f1b7b9af-259f-4720-9c19-4d863c8da2b9", 1);
-INSERT INTO friends values("74ea1f61-e7c3-4010-b2f6-7c75e4775182", "50c26662-4930-479c-9c65-f0ac5f25dfce", 1);
-INSERT INTO friends values("22774c51-e069-4fe5-b124-71be09f15a77", "74ea1f61-e7c3-4010-b2f6-7c75e4775182", 1);
-INSERT INTO friends values("aed59bcd-649c-4ed7-8654-3f441eb5c666", "74ea1f61-e7c3-4010-b2f6-7c75e4775182", 1);
-INSERT INTO friends values("22774c51-e069-4fe5-b124-71be09f15a77", "aed59bcd-649c-4ed7-8654-3f441eb5c666", 1);
-
-<<<<<<< HEAD
-
-INSERT INTO ratings values("8f32e5b8-0697-458a-a98d-a8df537d5df8", "2021-04-21 09:18:13.608000","<h1>kom</h1><h3>aaaaaacvaaaa</h3>",8, "98043b76-3c53-4d82-8f26-64508fe0703e", "1c45f396-84f8-49cb-9d1b-849de68cdd0d", null);
-INSERT INTO ratings values("e827bb0d-5cb2-46dd-ab24-a7acfa20935b", "2021-01-19 09:18:13.608000","<h2>komenatrz</h2><h3>aaaaaaaaaa</h3>",2, "f2a36daf-528c-4bf3-ab2c-e60568dbf888", "f1b7b9af-259f-4720-9c19-4d863c8da2b9", null);
-INSERT INTO ratings values("a1601838-440d-4abd-a534-151a2a8bf247", "2021-04-18 09:18:13.608000","<h1>kom3</h1><h2>komenatrz</h2><h3>aaaaaaaaaa</h3>",3, "e6b82072-f224-4f82-929d-3b03c0b5053d", "aed59bcd-649c-4ed7-8654-3f441eb5c666", null);
-INSERT INTO ratings values("61e263c5-3219-41df-b0f7-d6907f74de23", "2021-01-12 09:18:13.608000","<h3>aaaaaaaaaa</h3>",10, "a27d4b30-aefc-400c-9842-1f391935473d", "1c45f396-84f8-49cb-9d1b-849de68cdd0d", null);
-INSERT INTO ratings values("74cbf4eb-22d8-477f-b0b2-c02e6e0a69c2", "2021-04-10 09:18:13.608000","<h1>kom5</h1><h2>komenatrz</h2><h3>aaaaaaaaaa</h3>",8, "9f90f35c-9ec5-493f-9ef8-f46aaf744f78", "f1b7b9af-259f-4720-9c19-4d863c8da2b9", null);
-INSERT INTO ratings values("c968ca61-f71d-41fd-b5ba-5452fcd85da3", "2021-02-15 09:18:13.608000","<h1>kom6</h1><h2>komenatrz</h2>",9, "6049cf1c-6101-41c5-bb19-e4e463d18bd0", "50c26662-4930-479c-9c65-f0ac5f25dfce", null);
-INSERT INTO ratings values("5af01d77-a119-43c9-912d-2a3da177d921", "2021-12-24 09:18:13.608000","<h1>kom7</h1><h2>komenatrz</h2><h3>aaaaaaaaaa</h3>",5, "31d23db1-b90f-4383-8941-4a1e1ed22092", "22774c51-e069-4fe5-b124-71be09f15a77", null);
-INSERT INTO ratings values("e545eb21-5e10-48ef-81f3-8c6f85815ee7", "2021-11-22 09:18:13.608000","<h1>kom8</h1>komentarz gsadvg<h3>aaaaaaaaaa</h3>",1, "0552796e-a453-4d8e-b1bd-c3775df62046", "1c45f396-84f8-49cb-9d1b-849de68cdd0d", null);
-INSERT INTO ratings values("d3bb1188-8d42-4867-bd5e-db57bda77254", "2021-10-22 09:18:13.608000","<h1>kom9</h1><h2>komenatrz</h2>komensdtarz gfdg",3, "a79fc53a-fc94-41ac-8768-1739a5a6e249", "f1b7b9af-259f-4720-9c19-4d863c8da2b9", null);
-INSERT INTO ratings values("39e7ce46-6203-4022-b64a-b5833ff34ab1", "2021-12-23 09:18:13.608000","<h1>kom</h1><h2>komenatrz</h2><h3>aaaaaaaaaa</h3>",7, "6e751a55-03c7-40d3-8b17-924120dbbaec", "aed59bcd-649c-4ed7-8654-3f441eb5c666", null);
 
 
-INSERT INTO ratings values("a2a05d58-d132-4630-afec-e6b23fedca01", "2021-11-08 09:18:13.608000","<h1>kwqdw</h1><h2>komenatrz</h2><h3>aaaaaaaaaa</h3>",2, "f2a36daf-528c-4bf3-ab2c-e60568dbf888", "1c45f396-84f8-49cb-9d1b-849de68cdd0d", null);
-INSERT INTO ratings values("f104aeee-e76b-46b0-95d1-035b4388ef8c", "2021-04-01 09:18:13.608000","<h1>kom12</h1><h2>komsadatrz</h2><h3>aaaaaaaaaa</h3>",5, "e6b82072-f224-4f82-929d-3b03c0b5053d", "f1b7b9af-259f-4720-9c19-4d863c8da2b9", null);
-INSERT INTO ratings values("070fa069-5827-4012-99e0-97501025546b", "2021-10-04 09:18:13.608000","<h1>3213</h1><h2>komenatrz</h2>",7, "98043b76-3c53-4d82-8f26-64508fe0703e", "50c26662-4930-479c-9c65-f0ac5f25dfce", null);
-INSERT INTO ratings values("1fdf1eed-477e-4138-b29c-b437ad54e18a", "2021-02-05 09:18:13.608000","fds<h2>komdsadtrz</h2><h3>aaaaaaaaaa</h3>",8, "0552796e-a453-4d8e-b1bd-c3775df62046", "50c26662-4930-479c-9c65-f0ac5f25dfce", null);
-INSERT INTO ratings values("ac1f5a74-dc35-4e39-835a-bd33656e0232", "2021-02-15 09:18:13.608000","<h1>kom</h1><h2>komenatrz</h2><h3>aaaaaaaaaa</h3>",9, "9f90f35c-9ec5-493f-9ef8-f46aaf744f78", "1c45f396-84f8-49cb-9d1b-849de68cdd0d", null);
-INSERT INTO ratings values("8c3f7de4-2a0f-411d-8f43-43408ca09742", "2021-12-22 09:18:13.608000","<h2>komenatrz</h2><h3>aaaaaaaaaa</h3>",3, "6049cf1c-6101-41c5-bb19-e4e463d18bd0", "aed59bcd-649c-4ed7-8654-3f441eb5c666", null);
-INSERT INTO ratings values("f6f874d1-8947-470d-8bcc-c9cca3801f56", "2021-03-30 09:18:13.608000","<h1>kom42</h1><h2>komenatrz</h2>",5, "a27d4b30-aefc-400c-9842-1f391935473d", "22774c51-e069-4fe5-b124-71be09f15a77", null);
-INSERT INTO ratings values("3084c813-11f0-49d2-946a-82c1aad1550a", "2021-09-20 09:18:13.608000","asd<h2>komenatrz</h2><h3>aaaaaaaaaa</h3>",2, "6e751a55-03c7-40d3-8b17-924120dbbaec", "50c26662-4930-479c-9c65-f0ac5f25dfce", null);
-INSERT INTO ratings values("f4fe0918-8a26-4878-9f61-2a80c5df50b1", "2021-03-20 09:18:13.608000","<h1>kom</h1><h3>aaaaaaaaaa</h3>",1, "a79fc53a-fc94-41ac-8768-1739a5a6e249", "1c45f396-84f8-49cb-9d1b-849de68cdd0d", null);
-INSERT INTO ratings values("99a51f98-6698-4f6e-b54d-636695473c1e", "2021-09-20 09:18:13.608000","<h1>kom</h1><h2>komenatrz</h2><h3>aaaaaaaaaa</h3>",9, "31d23db1-b90f-4383-8941-4a1e1ed22092", "22774c51-e069-4fe5-b124-71be09f15a77", null);
-
-INSERT INTO ratings values("15a213dc-e19c-4ee3-bf42-6f29f9f5dd93", "2021-08-20 09:18:13.608000","<h1>kawdm</h1><h2>komenatrz</h2><h3>aaaaaaaaaa</h3>",2, "e6b82072-f224-4f82-929d-3b03c0b5053d", "1c45f396-84f8-49cb-9d1b-849de68cdd0d", null);
-INSERT INTO ratings values("00ab00bf-f0cb-4891-95c2-e6a972f36365", "2021-08-20 09:18:13.608000","<h2>komenatrz</h2><h3>aaaaaaaaaa</h3>",1, "0552796e-a453-4d8e-b1bd-c3775df62046", "f1b7b9af-259f-4720-9c19-4d863c8da2b9", null);
-INSERT INTO ratings values("98c38417-0105-46e4-b93e-e7dcef0e2ad7", "2021-04-08 09:18:13.608000","<h1>sa</h1><h2>komenatrz</h2><h3>aaaaaaaaaa</h3>",3, "f2a36daf-528c-4bf3-ab2c-e60568dbf888", "f1b7b9af-259f-4720-9c19-4d863c8da2b9", null);
-INSERT INTO ratings values("53c5c630-212e-4d09-bce8-9ee497229b99", "2021-07-07 09:18:13.608000","<h1>kdssm</h1>komentarz gfdg<h3>aaaaaaaaaa</h3>",5, "f2a36daf-528c-4bf3-ab2c-e60568dbf888", "22774c51-e069-4fe5-b124-71be09f15a77", null);
-INSERT INTO ratings values("a14d3c8a-117b-4792-85df-7f45be3ad0b5", "2021-04-25 09:18:13.608000","<h1>kom</h1><h2>komenatrz</h2><h3>aaaaaaaaaa</h3>",6, "a79fc53a-fc94-41ac-8768-1739a5a6e249", "50c26662-4930-479c-9c65-f0ac5f25dfce", null);
-INSERT INTO ratings values("85c20688-5c3e-4a15-bf25-47a256b42333", "2021-06-02 09:18:13.608000","komendrz gfdg<h3>aaaaaaaaaa</h3>",9, "98043b76-3c53-4d82-8f26-64508fe0703e", "1c45f396-84f8-49cb-9d1b-849de68cdd0d", null);
-INSERT INTO ratings values("5a865c7e-2279-4968-8502-1bc925441b71", "2021-04-07 09:18:13.608000","<h1>kom</h1><h2>komenatrz</h2><h3>aaaaaaaaaa</h3>",8, "9f90f35c-9ec5-493f-9ef8-f46aaf744f78", "50c26662-4930-479c-9c65-f0ac5f25dfce", null);
-INSERT INTO ratings values("8b150a81-082f-4560-9a76-8c02e46038a3", "2021-07-15 09:18:13.608000","<h1>kom</h1> komentarz gfdg",7, "31d23db1-b90f-4383-8941-4a1e1ed22092", "aed59bcd-649c-4ed7-8654-3f441eb5c666", null);
-INSERT INTO ratings values("04b9fb3e-a14d-48cd-83a5-d92001305eb6", "2021-04-24 09:18:13.608000","komentarz asdsa",9, "6049cf1c-6101-41c5-bb19-e4e463d18bd0", "1c45f396-84f8-49cb-9d1b-849de68cdd0d", null);
-INSERT INTO ratings values("47cdcf46-9806-4001-8bf5-465c653f6fca", "2021-05-15 09:18:13.608000","komentarz gfdg",10, "a27d4b30-aefc-400c-9842-1f391935473d", "50c26662-4930-479c-9c65-f0ac5f25dfce", null);
-INSERT INTO ratings values("2b36519b-cf6b-41d6-9358-960c785a9e8d", "2021-05-12 09:18:13.608000","<h1>kom</h1><h2>komenatrz</h2><h3>aaaaaaaaaa</h3>",3, "6e751a55-03c7-40d3-8b17-924120dbbaec", "22774c51-e069-4fe5-b124-71be09f15a77", null);
-=======
 INSERT INTO poznajrzeszow.ratings values("8f32e5b8-0697-458a-a98d-a8df537d5df8", "2021-04-21 09:18:13.608000","<h1>kom</h1><h3>aaaaaacvaaaa</h3>",8, "98043b76-3c53-4d82-8f26-64508fe0703e", "1c45f396-84f8-49cb-9d1b-849de68cdd0d", null);
 INSERT INTO poznajrzeszow.ratings values("e827bb0d-5cb2-46dd-ab24-a7acfa20935b", "2021-01-19 09:18:13.608000","<h2>komenatrz</h2><h3>aaaaaaaaaa</h3>",2, "f2a36daf-528c-4bf3-ab2c-e60568dbf888", "f1b7b9af-259f-4720-9c19-4d863c8da2b9", null);
 INSERT INTO poznajrzeszow.ratings values("a1601838-440d-4abd-a534-151a2a8bf247", "2021-04-18 09:18:13.608000","<h1>kom3</h1><h2>komenatrz</h2><h3>aaaaaaaaaa</h3>",3, "e6b82072-f224-4f82-929d-3b03c0b5053d", "aed59bcd-649c-4ed7-8654-3f441eb5c666", null);
@@ -168,4 +113,3 @@ INSERT INTO poznajrzeszow.ratings values("8b150a81-082f-4560-9a76-8c02e46038a3",
 INSERT INTO poznajrzeszow.ratings values("04b9fb3e-a14d-48cd-83a5-d92001305eb6", "2021-04-24 09:18:13.608000","komentarz asdsa",9, "6049cf1c-6101-41c5-bb19-e4e463d18bd0", "1c45f396-84f8-49cb-9d1b-849de68cdd0d", null);
 INSERT INTO poznajrzeszow.ratings values("47cdcf46-9806-4001-8bf5-465c653f6fca", "2021-05-15 09:18:13.608000","komentarz gfdg",10, "a27d4b30-aefc-400c-9842-1f391935473d", "50c26662-4930-479c-9c65-f0ac5f25dfce", null);
 INSERT INTO poznajrzeszow.ratings values("2b36519b-cf6b-41d6-9358-960c785a9e8d", "2021-05-12 09:18:13.608000","<h1>kom</h1><h2>komenatrz</h2><h3>aaaaaaaaaa</h3>",3, "6e751a55-03c7-40d3-8b17-924120dbbaec", "22774c51-e069-4fe5-b124-71be09f15a77", null);
->>>>>>> a723141b03589892704d209aeca67c74bf051d28
