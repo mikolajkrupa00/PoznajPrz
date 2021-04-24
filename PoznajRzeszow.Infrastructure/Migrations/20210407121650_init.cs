@@ -112,8 +112,7 @@ namespace PoznajRzeszow.Infrastructure.Migrations
                     Comment = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true),
                     Value = table.Column<int>(type: "int", nullable: false),
                     PlaceId = table.Column<Guid>(type: "char(36)", nullable: false),
-                    UserId = table.Column<Guid>(type: "char(36)", nullable: false),
-                    FilePath = table.Column<string>(type: "varchar(255)", nullable: true)
+                    UserId = table.Column<Guid>(type: "char(36)", nullable: false)
                 },
                 constraints: table =>
                 {
