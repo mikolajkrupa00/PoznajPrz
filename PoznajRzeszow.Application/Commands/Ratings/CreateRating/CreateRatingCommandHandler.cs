@@ -23,14 +23,19 @@ namespace PoznajRzeszow.Application.Commands.Ratings.CreateRating
         public async Task<RatingDto> Handle(CreateRatingCommand request, CancellationToken cancellationToken)
         {
             string filePath = null;
+            string filePathDB = null;
 
             if (request.File != null)
             {
                 var extension = System.IO.Path.GetExtension(request.File.FileName);
-                filePath = Path.Combine(".\\pliki\\", Path.GetRandomFileName());
+                //filePath = Path.Combine(".\\pliki\\", Path.GetRandomFileName());
+                string fileName = Path.GetRandomFileName();
+                filePath = Path.Combine(".\\../../Frontend/public/img/ratings\\", fileName);
                 filePath = Path.ChangeExtension(filePath, extension);
+                filePathDB = "img/ratings/" + Path.ChangeExtension(fileName, extension);
 
-                System.IO.Directory.CreateDirectory(".\\pliki\\");
+                System.IO.Directory.CreateDirectory(".\\../../Frontend/public/img/ratings\\");
+                //System.IO.Directory.CreateDirectory(".\\pliki\\");
 
                 using (var stream = System.IO.File.Create(filePath))
                 {
@@ -41,7 +46,7 @@ namespace PoznajRzeszow.Application.Commands.Ratings.CreateRating
             var rating = Rating.Create(
                 request.RatingDate, request.Comment,
                 request.Value, request.PlaceId,
-                request.UserId, request.File != null ? filePath : null
+                request.UserId, request.File != null ? filePathDB : null
             );
             await _ratingRepository.CreateAsync(rating);
             return new RatingDto(rating.RatingId);
