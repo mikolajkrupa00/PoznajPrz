@@ -26,7 +26,7 @@ namespace PoznajRzeszow.API.Controllers
 
         [HttpPost]
         [Authorize]
-        public async Task<IActionResult> CreateRating([FromBody] CreateRatingCommand command)
+        public async Task<IActionResult> CreateRating([FromForm] CreateRatingCommand command)
             => Ok(await _mediator.Send(command));
 
         [HttpDelete("{ratingId}")]

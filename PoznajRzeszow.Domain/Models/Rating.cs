@@ -8,7 +8,7 @@ namespace PoznajRzeszow.Domain.Models
 {
     public class Rating
     {
-        public Rating(Guid ratingId, DateTime ratingDate, string comment, int value, Guid placeId, Guid userId)
+        public Rating(Guid ratingId, DateTime ratingDate, string comment, int value, Guid placeId, Guid userId, string filePath)
         {
             RatingId = ratingId;
             RatingDate = RatingDate;
@@ -16,6 +16,7 @@ namespace PoznajRzeszow.Domain.Models
             Value = value;
             PlaceId = placeId;
             UserId = userId;
+            FilePath = filePath;
         }
 
         public Guid RatingId { get; set; }
@@ -24,8 +25,9 @@ namespace PoznajRzeszow.Domain.Models
         public int Value { get; set; }
         public Guid PlaceId { get; set; }
         public Guid UserId { get; set; }
+        public string FilePath { get; set; }
 
-        public static Rating Create(DateTime ratingDate, string comment, int value, Guid placeId, Guid userId)
-            => new Rating(Guid.NewGuid(), ratingDate, comment, value, placeId, userId);
+        public static Rating Create(DateTime ratingDate, string comment, int value, Guid placeId, Guid userId, String filePath)
+            => new Rating(Guid.NewGuid(), ratingDate, comment, value, placeId, userId, filePath);
     }
 }

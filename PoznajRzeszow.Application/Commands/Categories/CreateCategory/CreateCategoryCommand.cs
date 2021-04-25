@@ -10,5 +10,6 @@ namespace PoznajRzeszow.Application.Commands.Categories.CreateCategory
     public class CreateCategoryCommand : IRequest<CategoryDto>
     {
         public string Name { get; set; }
+        public Guid CategoryTypeId { get; set; }
     }
 }

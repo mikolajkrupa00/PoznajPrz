@@ -22,9 +22,10 @@ namespace PoznajRzeszow.Infrastructure.QueryHandlers.Places
         public async Task<PlaceDto> Handle(GetPlaceQuery request, CancellationToken cancellationToken)
             => await (from p in _context.Places
                       join c in _context.Categories on p.CategoryId equals c.PlaceCategoryId
+                      join ct in _context.CategoryTypes on c.CategoryTypeId equals ct.CategoryTypeId
                       where p.PlaceId == request.PlaceId
                       select new PlaceDto(p.PlaceId, p.Latitude, p.Attitude, p.Name, p.Description,
-                      p.Address, c.Name, p.Zoom))
+                      p.Address, c.Name, p.Zoom, ct.Name))
             .FirstAsync();
     }
 }

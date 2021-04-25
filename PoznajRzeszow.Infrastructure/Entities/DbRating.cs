@@ -18,6 +18,7 @@ namespace PoznajRzeszow.Infrastructure.Entities
         public virtual DbPlace Place { get; set; }
         public Guid UserId { get; set; }
         public virtual DbUser User { get; set; }
+        public string FilePath { get; set; }
 
         public static DbRating Create(Rating rating)
             => new DbRating
@@ -27,7 +28,8 @@ namespace PoznajRzeszow.Infrastructure.Entities
                 UserId = rating.UserId,
                 RatingDate = rating.RatingDate,
                 Value = rating.Value,
-                RatingId = rating.RatingId
+                RatingId = rating.RatingId,
+                FilePath = rating.FilePath
             };
     }
 }

@@ -36,8 +36,9 @@ namespace PoznajRzeszow.Infrastructure.Repositories
 
         public async Task<Category> GetAsync(Guid categoryId)
             => await (from c in _context.Categories
+                      join ct in _context.CategoryTypes on c.CategoryTypeId equals ct.CategoryTypeId
                       where c.PlaceCategoryId == categoryId
-                      select new Category(c.PlaceCategoryId, c.Name)).FirstAsync();
+                      select new Category(c.PlaceCategoryId, c.Name, ct.CategoryTypeId)).FirstAsync();
 
         public async Task UpdateAsync(Category category)
         {

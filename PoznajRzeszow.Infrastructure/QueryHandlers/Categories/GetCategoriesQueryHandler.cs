@@ -21,7 +21,8 @@ namespace PoznajRzeszow.Infrastructure.QueryHandlers.Categories
 
         public async Task<List<CategoryDto>> Handle(GetCategoriesQuery request, CancellationToken cancellationToken)
             => await (from c in _context.Categories
-                      select new CategoryDto(c.PlaceCategoryId, c.Name))
+                      join ct in _context.CategoryTypes on c.CategoryTypeId equals ct.CategoryTypeId
+                      select new CategoryDto(c.PlaceCategoryId, c.Name, ct.Name))
             .ToListAsync();
     }
 }

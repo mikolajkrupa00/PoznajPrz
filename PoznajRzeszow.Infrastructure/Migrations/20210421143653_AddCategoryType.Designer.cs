@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PoznajRzeszow.Infrastructure;
 
 namespace PoznajRzeszow.Infrastructure.Migrations
 {
     [DbContext(typeof(PoznajRzeszowContext))]
-    partial class PoznajRzeszowContextModelSnapshot : ModelSnapshot
+    [Migration("20210421143653_AddCategoryType")]
+    partial class AddCategoryType
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -137,9 +139,6 @@ namespace PoznajRzeszow.Infrastructure.Migrations
                         .HasColumnType("char(36)");
 
                     b.Property<string>("Comment")
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
-
-                    b.Property<string>("FilePath")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<Guid>("PlaceId")
