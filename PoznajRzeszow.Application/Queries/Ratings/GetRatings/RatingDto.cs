@@ -8,7 +8,7 @@ namespace PoznajRzeszow.Application.Queries.Ratings.GetRatings
 {
     public class RatingDto
     {
-        public RatingDto(Guid ratingId, DateTime ratingDate, string comment, int value, string username, bool isVisible)
+        public RatingDto(Guid ratingId, DateTime ratingDate, string comment, int value, string username, bool isVisible, string filePath)
         {
             RatingId = ratingId;
             RatingDate = RatingDate;
@@ -16,6 +16,7 @@ namespace PoznajRzeszow.Application.Queries.Ratings.GetRatings
             Value = value;
             Username = username;
             IsVisible = isVisible;
+            FilePath = filePath;
         }
 
         public Guid RatingId { get; set; }
@@ -24,5 +25,6 @@ namespace PoznajRzeszow.Application.Queries.Ratings.GetRatings
         public int Value { get; set; }
         public string Username { get; set; }
         public bool IsVisible { get; set; }
+        public string FilePath { get; set; }
     }
 }

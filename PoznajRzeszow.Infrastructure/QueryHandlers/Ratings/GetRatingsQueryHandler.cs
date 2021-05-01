@@ -24,7 +24,7 @@ namespace PoznajRzeszow.Infrastructure.QueryHandlers.Ratings
             => await (from r in _context.Ratings
                       join u in _context.Users on r.UserId equals u.UserId
                       where r.PlaceId == request.PlaceId
-                      select new RatingDto(r.RatingId, r.RatingDate, r.Comment, r.Value, u.Username, u.Role != Roles.RestrictedUser))
+                      select new RatingDto(r.RatingId, r.RatingDate, r.Comment, r.Value, u.Username, u.Role != Roles.RestrictedUser, r.FilePath))
             .ToListAsync();
     }
 }
