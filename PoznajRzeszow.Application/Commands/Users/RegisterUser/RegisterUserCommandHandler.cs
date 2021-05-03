@@ -26,12 +26,17 @@ namespace PoznajRzeszow.Application.Commands.Users.RegisterUser
 
         public async Task<UserDto> Handle(RegisterUserCommand request, CancellationToken cancellationToken)
         {
-            var salt = _passwordHasher.GenerateSalt();
-            var password = _passwordHasher.GenerateHash(request.Password, salt);
-            var user = User.Create(request.Email, request.Username, password, salt, Domain.Enums.Roles.User);
-            await _userRepository.CreateAsync(user);
-            var token = _jwtGenerator.Generate(user.UserId, Domain.Enums.Roles.User);
-            return new UserDto(user.UserId, token);
+            var existingUser = await _userRepository.GetAsync(request.Username);
+            if (existingUser == null)
+            {
+                var salt = _passwordHasher.GenerateSalt();
+                var password = _passwordHasher.GenerateHash(request.Password, salt);
+                var user = User.Create(request.Email, request.Username, password, salt, Domain.Enums.Roles.User);
+                await _userRepository.CreateAsync(user);
+                var token = _jwtGenerator.Generate(user.UserId, Domain.Enums.Roles.User);
+                return new UserDto(user.UserId, token);
+            }
+            throw new Exception();
         }
     }
 }
