@@ -6,6 +6,7 @@ using PoznajRzeszow.Application.Commands.Ratings.CreateRating;
 using PoznajRzeszow.Application.Commands.Ratings.DeleteRating;
 using PoznajRzeszow.Application.Commands.Ratings.UpdateRating;
 using PoznajRzeszow.Application.Queries.Ratings.GetRatings;
+using PoznajRzeszow.Application.Queries.Ratings.GetRatingsStats;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,7 +44,12 @@ namespace PoznajRzeszow.API.Controllers
             {
                 PlaceId = placeId
             }));
-
+        [HttpGet("getRatingsStats/{days}")]
+        public async Task<IActionResult> GetRatingsStats([FromRoute] int days)
+            => Ok(await _mediator.Send(new GetRatingsStatsQuery {
+                Days = days
+            }));
+            
         [HttpPut]
         [Authorize]
         public async Task<IActionResult> UpdateRating([FromBody] UpdateRatingCommand command)
