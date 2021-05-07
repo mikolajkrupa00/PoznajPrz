@@ -8,6 +8,7 @@ using PoznajRzeszow.Application.Commands.Places.DeletePlace;
 using PoznajRzeszow.Application.Commands.Places.UpdatePlace;
 using PoznajRzeszow.Application.Queries.Places.GetNotConfirmedPlaces;
 using PoznajRzeszow.Application.Queries.Places.GetPlace;
+using PoznajRzeszow.Application.Queries.Places.GetRandomPlace;
 using PoznajRzeszow.Application.Queries.Places.GetPlaces;
 using System;
 using System.Collections.Generic;
@@ -40,6 +41,13 @@ namespace PoznajRzeszow.API.Controllers
             {
                 PlaceId = placeId
             }));
+
+        [HttpGet("")]
+        public async Task<IActionResult> GetRandomPlace()
+           => Ok(await _mediator.Send(new GetRandomPlaceQuery
+           {
+   
+           }));
 
         [HttpPost]
         [Authorize]
