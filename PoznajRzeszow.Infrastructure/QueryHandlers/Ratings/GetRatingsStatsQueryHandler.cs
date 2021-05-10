@@ -22,8 +22,10 @@ namespace PoznajRzeszow.Infrastructure.QueryHandlers.Ratings
         public async Task<List<RatingStatsDto>> Handle(GetRatingsStatsQuery request, CancellationToken cancellationToken)
             => await (from r in _context.Ratings
                       where r.RatingDate > DateTime.UtcNow.AddDays(-request.Days)
-                      group r by new { r.PlaceId, r.RatingDate,r.Value } into rates
-                      select new RatingStatsDto(rates.Key.PlaceId, rates.Key.RatingDate, rates.Count(), rates.Average(val=>val.Value)))
+                      join p in _context.Places on r.PlaceId equals p.PlaceId into place
+                      from pp in place.DefaultIfEmpty()
+                      group r by new { pp.PlaceId, pp.Name, pp.Address, pp.Description } into rates
+                      select new RatingStatsDto(rates.Key.PlaceId, rates.Count(), rates.Average(val=>val.Value), rates.Key.Name, rates.Key.Address, rates.Key.Description))
             .ToListAsync();
     }
 }
