@@ -56,7 +56,7 @@ namespace PoznajRzeszow.API.Controllers
             }
             catch
             {
-                return Ok();
+                return Unauthorized();
             }
         }
     }
