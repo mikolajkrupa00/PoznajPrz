@@ -8,12 +8,13 @@ namespace PoznajRzeszow.Application.Queries.Ratings.GetRatingsStats
 {
     public class RatingStatsDto
     {
-        public RatingStatsDto(Guid placeId, int numOfComments, double averageValue, string categoryName, string address, string description)
+        public RatingStatsDto(Guid placeId, int numOfComments, double averageValue, int numOfVisits, string name, string address, string description)
         {
             PlaceId = placeId;
             NumOfComments = numOfComments;
             AverageValue = averageValue;
-            CategoryName = categoryName;
+            NumOfVisits = numOfVisits;
+            Name = name;
             Address = address;
             Description = description;
         }
@@ -21,7 +22,8 @@ namespace PoznajRzeszow.Application.Queries.Ratings.GetRatingsStats
         public Guid PlaceId { get; set; }
         public int NumOfComments { get; set; }
         public double AverageValue { get; set; }
-        public string CategoryName { get; set; }
+        public int NumOfVisits { get; set; }
+        public string Name { get; set; }
         public string Address { get; set; }
         public string Description { get; set; }
     }
