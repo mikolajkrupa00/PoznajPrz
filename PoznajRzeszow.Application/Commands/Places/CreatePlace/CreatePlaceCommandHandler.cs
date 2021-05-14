@@ -65,7 +65,7 @@ namespace PoznajRzeszow.Application.Commands.Places.CreatePlace
                 
             }
 
-            var place = Place.Create(request.Latitude, request.Longitude, request.Name, request.Description, request.Address, 
+            var place = Place.Create(placeID, request.Latitude, request.Longitude, request.Name, request.Description, request.Address, 
                                      request.CategoryId, directoryPathDB, mainPhotoPathDB);
             await _placeRepository.CreateAsync(place);
             return new PlaceDto(placeID);

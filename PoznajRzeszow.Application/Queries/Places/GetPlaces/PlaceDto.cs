@@ -41,13 +41,17 @@ namespace PoznajRzeszow.Application.Queries.Places.GetPlaces
 
         public string[] getAllFilesFromDirectory(string path, Guid placeID)
         {
+
+            if (Directory.Exists(@"../../Frontend/public/img/places/" + placeID) == false) return null;
+
             string[] files = Directory.GetFiles(@"../../Frontend/public/img/places/" + placeID);
+                       
 
             int index = 0;
             foreach (string file in files)
             {   
                 if(path != null){
-                    files[index] = path + Path.GetFileName(file);
+                    files[index] = path + "/" + Path.GetFileName(file);
                 }
                 else{
                     files[index] = null;

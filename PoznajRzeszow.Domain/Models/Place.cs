@@ -34,7 +34,7 @@ namespace PoznajRzeszow.Domain.Models
         public string DirectoryPath { get; set; }
         public string MainPhoto { get; set; }
 
-        public static Place Create(decimal latitude, decimal longitude, string name, string description, string address, Guid categoryId, string directoryPath, string mainPhoto)
-            => new Place(Guid.NewGuid(), latitude, longitude, name, description, address, categoryId, false, directoryPath, mainPhoto);
+        public static Place Create(Guid placeId, decimal latitude, decimal longitude, string name, string description, string address, Guid categoryId, string directoryPath, string mainPhoto)
+            => new Place(placeId, latitude, longitude, name, description, address, categoryId, false, directoryPath, mainPhoto);
     }
 }
