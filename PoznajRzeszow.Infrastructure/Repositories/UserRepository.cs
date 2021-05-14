@@ -36,6 +36,12 @@ namespace PoznajRzeszow.Infrastructure.Repositories
                           where u.UserId == userId
                           select new User(u.UserId, u.Email, u.Username, u.Password, u.Salt, u.Role)).FirstAsync();
 
+        public async Task<User> GetByEmailAsync(string email)
+            => await (from u in _context.Users
+                      where u.Email == email
+                      select new User(u.UserId, u.Email, u.Username, u.Password, u.Salt, u.Role))
+            .FirstOrDefaultAsync();
+
         public async Task UpdateAsync(User user)
         {
             var _user = await (from u in _context.Users

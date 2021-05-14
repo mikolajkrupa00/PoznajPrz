@@ -28,8 +28,15 @@ namespace PoznajRzeszow.API.Controllers
         [HttpPost]
         public async Task<IActionResult> RegisterUser([FromBody] RegisterUserCommand command)
         {
-            var id = await _mediator.Send(command);
-            return Ok(id);
+            try
+            {
+                var registeredUser = await _mediator.Send(command);
+                return Created($"api/User/{registeredUser.UserId}", registeredUser);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet("{userId}")]
