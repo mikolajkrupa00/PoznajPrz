@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PoznajRzeszow.Infrastructure;
 
 namespace PoznajRzeszow.Infrastructure.Migrations
 {
     [DbContext(typeof(PoznajRzeszowContext))]
-    partial class PoznajRzeszowContextModelSnapshot : ModelSnapshot
+    [Migration("20210512205417_Add FolderPath and MainPhoto columns")]
+    partial class AddFolderPathandMainPhotocolumns
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

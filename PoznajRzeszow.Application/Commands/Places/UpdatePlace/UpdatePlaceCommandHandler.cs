@@ -23,7 +23,7 @@ namespace PoznajRzeszow.Application.Commands.Places.UpdatePlace
         {
             var place = await _placeRepository.GetAsync(request.PlaceId);
             place.Latitude = request.Latitude;
-            place.Attitude = request.Attitude;
+            place.Longitude = request.Longitude;
             place.Name = request.Name;
             place.Description = request.Description;
             place.Address = request.Address;

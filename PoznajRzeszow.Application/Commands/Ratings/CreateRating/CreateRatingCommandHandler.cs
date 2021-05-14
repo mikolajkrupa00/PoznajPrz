@@ -28,14 +28,13 @@ namespace PoznajRzeszow.Application.Commands.Ratings.CreateRating
             if (request.File != null)
             {
                 var extension = System.IO.Path.GetExtension(request.File.FileName);
-                //filePath = Path.Combine(".\\pliki\\", Path.GetRandomFileName());
                 string fileName = Path.GetRandomFileName();
                 filePath = Path.Combine(".\\../../Frontend/public/img/ratings\\", fileName);
                 filePath = Path.ChangeExtension(filePath, extension);
                 filePathDB = "img/ratings/" + Path.ChangeExtension(fileName, extension);
 
                 System.IO.Directory.CreateDirectory(".\\../../Frontend/public/img/ratings\\");
-                //System.IO.Directory.CreateDirectory(".\\pliki\\");
+                
 
                 using (var stream = System.IO.File.Create(filePath))
                 {

@@ -28,7 +28,7 @@ namespace PoznajRzeszow.Infrastructure.Repositories
         public async Task<Place> GetAsync(Guid placeId)
             => await (from p in _context.Places
                       where p.PlaceId == placeId
-                      select new Place(p.PlaceId, p.Latitude, p.Attitude, p.Name, p.Description, p.Address, p.CategoryId, p.IsConfirmed))
+                      select new Place(p.PlaceId, p.Latitude, p.Longitude, p.Name, p.Description, p.Address, p.CategoryId, p.IsConfirmed, p.MainPhoto))
                       .FirstAsync();
 
         public async Task UpdateAsync(Place place)
@@ -39,7 +39,7 @@ namespace PoznajRzeszow.Infrastructure.Repositories
             _place.Latitude = place.Latitude;
             _place.Name = place.Name;
             _place.Address = place.Address;
-            _place.Attitude = place.Attitude;
+            _place.Longitude = place.Longitude;
             _place.CategoryId = place.CategoryId;
             _place.IsConfirmed = place.IsConfirmed;
             _place.Description = place.Description;
