@@ -33,7 +33,6 @@ namespace PoznajRzeszow.API.Controllers
             }));
 
         [HttpGet("getStats/{days}")]
-        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetStats(int days)
             => Ok(await _mediator.Send(new GetStatsQuery
             {
