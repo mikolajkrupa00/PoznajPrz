@@ -36,6 +36,7 @@ namespace PoznajRzeszow.Application.Commands.Places.CreatePlace
             if (request.MainPhoto != null)
             {
                 var extension = System.IO.Path.GetExtension(request.MainPhoto.FileName);
+                mainPhotoPathDB += extension;
                 string fileName = "main_photo";
                 filePath = Path.Combine(@"../../Frontend/public/img/places/" + placeID, fileName);
                 filePath = Path.ChangeExtension(filePath, extension);
@@ -54,7 +55,7 @@ namespace PoznajRzeszow.Application.Commands.Places.CreatePlace
                 {
                     var extension = System.IO.Path.GetExtension(photo.FileName);
                     string fileName = Path.GetRandomFileName();     
-                    filePath = Path.Combine(@"../../Frontend/public/img/places/"+ placeID, fileName);
+                    filePath = Path.Combine(@"../../Frontend/public/img/places/" + placeID, fileName);
                     filePath = Path.ChangeExtension(filePath, extension);
 
                     using (var stream = System.IO.File.Create(filePath))
