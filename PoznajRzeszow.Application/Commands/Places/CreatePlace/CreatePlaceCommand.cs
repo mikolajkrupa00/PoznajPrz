@@ -16,9 +16,8 @@ namespace PoznajRzeszow.Application.Commands.Places.CreatePlace
         public string Description { get; set; }
         public string Address { get; set; }
         public Guid CategoryId { get; set; }
-        public string MainPhoto { get; set; }
-        public IFormFileCollection Files { get; set; }
-
+        public IFormFile MainPhoto { get; set; }
+        public List<IFormFile> Photos { get; set; }
 
     }
 }

@@ -25,7 +25,7 @@ namespace PoznajRzeszow.Infrastructure.QueryHandlers.Places
                       join ct in _context.CategoryTypes on c.CategoryTypeId equals ct.CategoryTypeId
                       where p.PlaceId == request.PlaceId
                       select new PlaceDto(p.PlaceId, p.Latitude, p.Longitude, p.Name, p.Description,
-                      p.Address, c.Name, p.Zoom, ct.Name, p.FolderPath, p.MainPhoto))
+                      p.Address, c.Name, p.Zoom, ct.Name, p.DirectoryPath, p.MainPhoto))
             .FirstAsync();
     }
 }

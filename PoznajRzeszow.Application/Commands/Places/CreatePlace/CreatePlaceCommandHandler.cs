@@ -21,25 +21,55 @@ namespace PoznajRzeszow.Application.Commands.Places.CreatePlace
         }
 
         public async Task<PlaceDto> Handle(CreatePlaceCommand request, CancellationToken cancellationToken)
-        {
+        {            
             //creates new random ID for new place
             Guid placeID = Guid.NewGuid();
 
             //creates directory for new place to store images
             System.IO.Directory.CreateDirectory(@"../../Frontend/public/img/places/"+ placeID);
 
-            string folderPath = "img/places/" + placeID;
-            //save photos to already created direcotry
-            if (request.Files != null)
+            string directoryPathDB = "img/places/" + placeID;
+            string mainPhotoPathDB = "img/places/" + placeID + "/main_photo";
+            string filePath;
+
+            //save main_photo to already created direcotry
+            if (request.MainPhoto != null)
             {
-                int a = 140;
+                var extension = System.IO.Path.GetExtension(request.MainPhoto.FileName);
+                string fileName = "main_photo";
+                filePath = Path.Combine(@"../../Frontend/public/img/places/" + placeID, fileName);
+                filePath = Path.ChangeExtension(filePath, extension);
+
+                using (var stream = System.IO.File.Create(filePath))
+                {
+                    await request.MainPhoto.CopyToAsync(stream);
+                }
+            }
+
+            //save photos to already created direcotry
+            if (request.Photos != null)
+            {
+
+                foreach (var photo in request.Photos)
+                {
+                    var extension = System.IO.Path.GetExtension(photo.FileName);
+                    string fileName = Path.GetRandomFileName();     
+                    filePath = Path.Combine(@"../../Frontend/public/img/places/"+ placeID, fileName);
+                    filePath = Path.ChangeExtension(filePath, extension);
+
+                    using (var stream = System.IO.File.Create(filePath))
+                    {
+                        await photo.CopyToAsync(stream);
+                    }
+                }              
+                
             }
 
             var place = Place.Create(request.Latitude, request.Longitude, request.Name, request.Description, request.Address, 
-                                     request.CategoryId, request.MainPhoto);
+                                     request.CategoryId, directoryPathDB, mainPhotoPathDB);
             await _placeRepository.CreateAsync(place);
-            //return new PlaceDto(place.PlaceId);
             return new PlaceDto(placeID);
         }
+                
     }
 }

@@ -24,7 +24,7 @@ namespace PoznajRzeszow.Infrastructure.Entities
         public string Address { get; set; }
         public int Zoom { get; set; }
         public bool IsConfirmed { get; set; }
-        public string FolderPath { get; set; }
+        public string DirectoryPath { get; set; }
         public string MainPhoto { get; set; }
 
         public Guid CategoryId { get; set; }
@@ -45,7 +45,7 @@ namespace PoznajRzeszow.Infrastructure.Entities
                 Longitude = place.Longitude,
                 IsConfirmed = false,
                 //czemu tu nie ma kolumny zoom nigdzie ?
-                FolderPath = place.FolderPath,
+                DirectoryPath = place.DirectoryPath,
                 MainPhoto = place.MainPhoto,
             };
     }

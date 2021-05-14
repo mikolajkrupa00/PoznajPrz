@@ -9,7 +9,7 @@ namespace PoznajRzeszow.Domain.Models
     public class Place
     {
         public Place(Guid placeId, decimal latitude, decimal longitude, string name, string description, string address, 
-            Guid categoryId, bool isConfirmed, string mainPhoto)
+            Guid categoryId, bool isConfirmed, string directoryPath, string mainPhoto)
         {
             PlaceId = placeId;
             Latitude = latitude;
@@ -19,6 +19,7 @@ namespace PoznajRzeszow.Domain.Models
             Address = address;
             CategoryId = categoryId;
             IsConfirmed = isConfirmed;
+            DirectoryPath = directoryPath;
             MainPhoto = mainPhoto;
         }
 
@@ -30,10 +31,10 @@ namespace PoznajRzeszow.Domain.Models
         public string Address { get; set; }
         public Guid CategoryId { get; set; }
         public bool IsConfirmed { get; set; }
-        public string FolderPath { get; set; }
+        public string DirectoryPath { get; set; }
         public string MainPhoto { get; set; }
 
-        public static Place Create(decimal latitude, decimal longitude, string name, string description, string address, Guid categoryId, string mainPhoto)
-            => new Place(Guid.NewGuid(), latitude, longitude, name, description, address, categoryId, false, mainPhoto);
+        public static Place Create(decimal latitude, decimal longitude, string name, string description, string address, Guid categoryId, string directoryPath, string mainPhoto)
+            => new Place(Guid.NewGuid(), latitude, longitude, name, description, address, categoryId, false, directoryPath, mainPhoto);
     }
 }
