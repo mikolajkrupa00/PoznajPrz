@@ -28,7 +28,7 @@ namespace PoznajRzeszow.Application.Commands.Users.AutheticateUser
         {
             var user = await _userRepository.GetAsync(request.Username);
             if (user != null && _passwordHasher.Validate(request.Password, user.Salt, user.Password))
-                return new UserDto(user.UserId, user.Email, user.Username, user.Role, _jwtGenerator.Generate(user.UserId, user.Role));
+                return new UserDto(user.UserId, user.Username, user.Role, _jwtGenerator.Generate(user.UserId, user.Role));
             throw new Exception();
         }
     }

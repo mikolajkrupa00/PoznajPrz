@@ -37,7 +37,7 @@ namespace PoznajRzeszow.Application.Commands.Users.RegisterUser
             var user = User.Create(request.Email, request.Username, password, salt, Domain.Enums.Roles.User);
             await _userRepository.CreateAsync(user);
             var token = _jwtGenerator.Generate(user.UserId, Domain.Enums.Roles.User);
-            return new UserDto(user.UserId, token);
+            return new UserDto(user.UserId, user.Username, token, user.Role);
         }
     }
 }
