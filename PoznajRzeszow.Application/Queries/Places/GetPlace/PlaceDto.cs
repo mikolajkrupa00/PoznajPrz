@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace PoznajRzeszow.Application.Queries.Places.GetPlace
     public class PlaceDto
     {
         public PlaceDto(Guid placeId, decimal latitude, decimal longitude, string name, string description, string address,
-            string categoryName, int zoom, string categoryTypeName, string folderPath, string mainPhoto)
+            string categoryName, int zoom, string categoryTypeName, string directoryPath, string mainPhoto)
         {
             PlaceId = placeId;
             Latitude = latitude;
@@ -20,7 +21,7 @@ namespace PoznajRzeszow.Application.Queries.Places.GetPlace
             CategoryName = categoryName;
             Zoom = zoom;
             CategoryTypeName = categoryTypeName;
-            Photos = getAllFilesFromFolder(folderPath);
+            Photos = getAllFilesFromDirectory(directoryPath, PlaceId);
             MainPhoto = mainPhoto;
         }
 
@@ -36,9 +37,24 @@ namespace PoznajRzeszow.Application.Queries.Places.GetPlace
         public string[] Photos { get; set; }
         public string MainPhoto { get; set; }
 
-        public string[] getAllFilesFromFolder(string path)
-        {
-            string[] files = { "sample1.jpg", "sample2.jpg", "sample3.jpg" };
+        public string[] getAllFilesFromDirectory(string path, Guid placeID){
+
+            if (Directory.Exists(@"../../Frontend/public/img/places/" + placeID) == false) return null;
+
+            string[] files = Directory.GetFiles(@"../../Frontend/public/img/places/" + placeID);
+
+            int index = 0;
+            foreach (string file in files){
+
+                if (path != null){
+                    files[index] = path + "/" + Path.GetFileName(file);
+                }
+                else{
+                    files[index] = null;
+                }
+
+                index += 1;
+            }
 
             return files;
         }

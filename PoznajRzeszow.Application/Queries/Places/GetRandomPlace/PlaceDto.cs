@@ -37,23 +37,19 @@ namespace PoznajRzeszow.Application.Queries.Places.GetRandomPlace
         public string[] Photos { get; set; }
         public string MainPhoto { get; set; }
 
-        public string[] getAllFilesFromDirectory(string path, Guid placeID)
-        {
+        public string[] getAllFilesFromDirectory(string path, Guid placeID){
 
             if (Directory.Exists(@"../../Frontend/public/img/places/" + placeID) == false) return null;
 
             string[] files = Directory.GetFiles(@"../../Frontend/public/img/places/" + placeID);
 
-
             int index = 0;
-            foreach (string file in files)
-            {
-                if (path != null)
-                {
+            foreach (string file in files){
+
+                if (path != null){
                     files[index] = path + "/" + Path.GetFileName(file);
                 }
-                else
-                {
+                else{
                     files[index] = null;
                 }
 
