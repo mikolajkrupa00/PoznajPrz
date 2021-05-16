@@ -28,14 +28,21 @@ namespace PoznajRzeszow.API.Controllers
         [HttpPost]
         public async Task<IActionResult> RegisterUser([FromBody] RegisterUserCommand command)
         {
-            var id = await _mediator.Send(command);
-            return Ok(id);
+            try
+            {
+                var registeredUser = await _mediator.Send(command);
+                return Created($"api/User/{registeredUser.UserId}", registeredUser);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet("{userId}")]
         public async Task<IActionResult> GetUser([FromRoute] Guid userId)
             => Ok(await _mediator.Send(new GetUserQuery
-            { 
+            {
                 UserId = userId
             }));
 
@@ -49,6 +56,15 @@ namespace PoznajRzeszow.API.Controllers
 
         [HttpPost("authenticate")]
         public async Task<IActionResult> AuthenticateUser([FromBody] AutheticateUserCommand command)
-            => Ok(await _mediator.Send(command));
+        {
+            try
+            {
+                return Ok(await _mediator.Send(command));
+            }
+            catch
+            {
+                return Unauthorized();
+            }
+        }
     }
 }
