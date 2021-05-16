@@ -26,7 +26,7 @@ namespace PoznajRzeszow.Infrastructure.QueryHandlers.Places
                       join ct in _context.CategoryTypes on c.CategoryTypeId equals ct.CategoryTypeId
                       join v in _context.Visits on p.PlaceId equals v.PlaceId into visit
                       from subv in visit.DefaultIfEmpty()
-                      select new PlaceDto(p.PlaceId, p.Name, p.Description, p.Address, c.Name, p.Zoom, ct.Name))
+                      select new PlaceDto(p.PlaceId, p.Name, p.Description, p.Address, c.Name, p.Zoom, ct.Name, p.DirectoryPath, p.MainPhoto))
             .ToListAsync();
     }
 }

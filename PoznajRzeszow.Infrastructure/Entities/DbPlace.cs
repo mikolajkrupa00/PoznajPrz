@@ -17,13 +17,15 @@ namespace PoznajRzeszow.Infrastructure.Entities
         }
 
         public Guid PlaceId { get; set; }
-        public decimal Latitude { get; set; }
-        public decimal Attitude { get; set; }
+        public string Latitude { get; set; }
+        public string Longitude { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string Address { get; set; }
         public int Zoom { get; set; }
         public bool IsConfirmed { get; set; }
+        public string DirectoryPath { get; set; }
+        public string MainPhoto { get; set; }
 
         public Guid CategoryId { get; set; }
         public virtual DbPlaceCategory Category { get; set; }
@@ -35,13 +37,16 @@ namespace PoznajRzeszow.Infrastructure.Entities
             => new DbPlace
             {
                 Address = place.Address,
-                Attitude = place.Attitude,
                 CategoryId = place.CategoryId,
                 Description = place.Description,
                 PlaceId = place.PlaceId,
                 Name = place.Name,
                 Latitude = place.Latitude,
-                IsConfirmed = false
+                Longitude = place.Longitude,
+                IsConfirmed = false,
+                //czemu tu nie ma kolumny zoom nigdzie ?
+                DirectoryPath = place.DirectoryPath,
+                MainPhoto = place.MainPhoto,
             };
     }
 }

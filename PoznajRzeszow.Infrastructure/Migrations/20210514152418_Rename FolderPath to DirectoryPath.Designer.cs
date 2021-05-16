@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PoznajRzeszow.Infrastructure;
 
 namespace PoznajRzeszow.Infrastructure.Migrations
 {
     [DbContext(typeof(PoznajRzeszowContext))]
-    partial class PoznajRzeszowContextModelSnapshot : ModelSnapshot
+    [Migration("20210514152418_Rename FolderPath to DirectoryPath")]
+    partial class RenameFolderPathtoDirectoryPath
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -95,11 +97,11 @@ namespace PoznajRzeszow.Infrastructure.Migrations
                     b.Property<bool>("IsConfirmed")
                         .HasColumnType("tinyint(1)");
 
-                    b.Property<string>("Latitude")
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+                    b.Property<decimal>("Latitude")
+                        .HasColumnType("decimal(65,30)");
 
-                    b.Property<string>("Longitude")
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+                    b.Property<decimal>("Longitude")
+                        .HasColumnType("decimal(65,30)");
 
                     b.Property<string>("MainPhoto")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");

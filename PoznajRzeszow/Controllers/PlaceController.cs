@@ -43,7 +43,7 @@ namespace PoznajRzeszow.API.Controllers
 
         [HttpPost]
         [Authorize]
-        public async Task<IActionResult> CreatePlace([FromBody] CreatePlaceCommand command)
+        public async Task<IActionResult> CreatePlace([FromForm] CreatePlaceCommand command)
             => Ok(await _mediator.Send(command));
 
         [HttpPut]
