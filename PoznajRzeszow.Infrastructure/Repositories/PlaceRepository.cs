@@ -37,9 +37,9 @@ namespace PoznajRzeszow.Infrastructure.Repositories
                                 where p.PlaceId == place.PlaceId
                                 select p).FirstAsync();
             _place.Latitude = place.Latitude;
+            _place.Longitude = place.Longitude;
             _place.Name = place.Name;
             _place.Address = place.Address;
-            _place.Longitude = place.Longitude;
             _place.CategoryId = place.CategoryId;
             _place.IsConfirmed = place.IsConfirmed;
             _place.Description = place.Description;
