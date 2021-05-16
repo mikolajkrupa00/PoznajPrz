@@ -36,7 +36,7 @@ namespace PoznajRzeszow.Infrastructure.QueryHandlers.Ratings
                                  group visit by visit.PlaceId into v
                                  select new {
                                      v.Key,
-                                     NumOfVisits = v.Count() 
+                                     NumOfVisits = v.Count()
                                  }) 
                       on p.PlaceId equals v.Key
                       

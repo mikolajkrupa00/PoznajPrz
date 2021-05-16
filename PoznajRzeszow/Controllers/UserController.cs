@@ -4,8 +4,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PoznajRzeszow.Application.Commands.Users.AutheticateUser;
 using PoznajRzeszow.Application.Commands.Users.BlockUser;
+using PoznajRzeszow.Application.Commands.Users.UnblockUser;
 using PoznajRzeszow.Application.Commands.Users.RegisterUser;
 using PoznajRzeszow.Application.Queries.Users.GetUser;
+using PoznajRzeszow.Application.Queries.Users.GetUsersList;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,7 +40,11 @@ namespace PoznajRzeszow.API.Controllers
             { 
                 UserId = userId
             }));
-
+        [HttpGet("blockedUsers")]
+        public async Task<IActionResult> GetUsersList()
+            => Ok(await _mediator.Send(new GetUsersListQuery
+            {
+            }));
         [HttpPut("blockUser/{username}")]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> BlockUser([FromRoute] string username)
@@ -46,7 +52,13 @@ namespace PoznajRzeszow.API.Controllers
             {
                 Username = username
             }));
-
+        [HttpPut("unblockUser/{username}")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> UnblockUser([FromRoute] string username)
+            => Ok(await _mediator.Send(new UnblockUserCommand
+            {
+                Username = username
+            }));
         [HttpPost("authenticate")]
         public async Task<IActionResult> AuthenticateUser([FromBody] AutheticateUserCommand command)
             => Ok(await _mediator.Send(command));
