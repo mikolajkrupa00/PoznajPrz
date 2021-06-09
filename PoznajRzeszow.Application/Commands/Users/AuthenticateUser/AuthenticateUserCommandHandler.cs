@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 
 namespace PoznajRzeszow.Application.Commands.Users.AutheticateUser
 {
-    public class AutheticateUserCommandHandler : IRequestHandler<AutheticateUserCommand, UserDto>
+    public class AuthenticateUserCommandHandler : IRequestHandler<AuthenticateUserCommand, UserDto>
     {
         private readonly IUserRepository _userRepository;
         private readonly IJwtGenerator _jwtGenerator;
         private readonly IPasswordHasher _passwordHasher;
 
-        public AutheticateUserCommandHandler(IUserRepository userRepository, IPasswordHasher passwordHasher,
+        public AuthenticateUserCommandHandler(IUserRepository userRepository, IPasswordHasher passwordHasher,
             IJwtGenerator jwtGenerator)
         {
             _userRepository = userRepository;
@@ -24,7 +24,7 @@ namespace PoznajRzeszow.Application.Commands.Users.AutheticateUser
             _jwtGenerator = jwtGenerator;
         }
 
-        public async Task<UserDto> Handle(AutheticateUserCommand request, CancellationToken cancellationToken)
+        public async Task<UserDto> Handle(AuthenticateUserCommand request, CancellationToken cancellationToken)
         {
             var user = await _userRepository.GetAsync(request.Username);
             if (user != null && _passwordHasher.Validate(request.Password, user.Salt, user.Password))

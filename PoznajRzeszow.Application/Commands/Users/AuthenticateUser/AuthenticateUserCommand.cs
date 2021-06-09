@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PoznajRzeszow.Application.Commands.Users.AutheticateUser
 {
-    public class AutheticateUserCommand : IRequest<UserDto>
+    public class AuthenticateUserCommand : IRequest<UserDto>
     {
         public string Username { get; set; }
         public string Password { get; set; }

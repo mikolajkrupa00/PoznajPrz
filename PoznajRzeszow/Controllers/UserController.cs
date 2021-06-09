@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PoznajRzeszow.Application.Commands.Users.AutheticateUser;
+using PoznajRzeszow.Application.Commands.Users.ChangeUserDetails;
 using PoznajRzeszow.Application.Commands.Users.BlockUser;
 using PoznajRzeszow.Application.Commands.Users.UnblockUser;
 using PoznajRzeszow.Application.Commands.Users.RegisterUser;
@@ -12,6 +13,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using PoznajRzeszow.Application.Commands.Users.ChangePassword;
 
 namespace PoznajRzeszow.API.Controllers
 {
@@ -47,6 +49,7 @@ namespace PoznajRzeszow.API.Controllers
             {
                 UserId = userId
             }));
+
         [HttpGet("blockedUsers")]
         public async Task<IActionResult> GetUsersList()
             => Ok(await _mediator.Send(new GetUsersListQuery
@@ -60,6 +63,7 @@ namespace PoznajRzeszow.API.Controllers
             {
                 Username = username
             }));
+
         [HttpPut("unblockUser/{username}")]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> UnblockUser([FromRoute] string username)
@@ -68,8 +72,40 @@ namespace PoznajRzeszow.API.Controllers
                 Username = username
             }));
 
+        [HttpPut("changeUserDetails")]
+        [Authorize]
+        public async Task<IActionResult> ChangeUserDetails([FromBody] ChangeUserDetailsCommand command)
+        {
+            try
+            {
+                await _mediator.Send(command);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPut("changePassword")]
+        [Authorize]
+        public async Task<IActionResult> ChangePassword([FromBody] ChangePasswordCommand command)
+        {
+            try
+            {
+                await _mediator.Send(command);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message == "Wrong password") return Unauthorized(ex.Message);
+                else return BadRequest(ex.Message);
+            }
+        }
+
+        [AllowAnonymous]
         [HttpPost("authenticate")]
-        public async Task<IActionResult> AuthenticateUser([FromBody] AutheticateUserCommand command)
+        public async Task<IActionResult> AuthenticateUser([FromBody] AuthenticateUserCommand command)
         {
             try
             {
