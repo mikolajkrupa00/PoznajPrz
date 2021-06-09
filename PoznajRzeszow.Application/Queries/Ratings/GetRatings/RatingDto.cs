@@ -11,7 +11,7 @@ namespace PoznajRzeszow.Application.Queries.Ratings.GetRatings
         public RatingDto(Guid ratingId, DateTime ratingDate, string comment, int value, string username, bool isVisible, string filePath)
         {
             RatingId = ratingId;
-            RatingDate = RatingDate;
+            RatingDate = ratingDate.ToString("MM/dd/yyyy HH:mm:ss");
             Comment = comment;
             Value = value;
             Username = username;
@@ -20,7 +20,7 @@ namespace PoznajRzeszow.Application.Queries.Ratings.GetRatings
         }
 
         public Guid RatingId { get; set; }
-        public DateTime RatingDate { get; set; }
+        public string RatingDate { get; set; }
         public string Comment { get; set; }
         public int Value { get; set; }
         public string Username { get; set; }

@@ -11,7 +11,7 @@ namespace PoznajRzeszow.Domain.Models
         public Rating(Guid ratingId, DateTime ratingDate, string comment, int value, Guid placeId, Guid userId, string filePath)
         {
             RatingId = ratingId;
-            RatingDate = RatingDate;
+            RatingDate = ratingDate;
             Comment = comment;
             Value = value;
             PlaceId = placeId;
