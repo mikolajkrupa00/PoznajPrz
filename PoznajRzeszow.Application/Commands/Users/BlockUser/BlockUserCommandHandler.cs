@@ -22,6 +22,8 @@ namespace PoznajRzeszow.Application.Commands.Users.BlockUser
         public async Task<Unit> Handle(BlockUserCommand request, CancellationToken cancellationToken)
         {
             var user = await _userRepository.GetAsync(request.Username);
+            if (user == null) throw new Exception("User not found");
+            if (user.Role == Roles.RestrictedUser) throw new Exception("User already restricted");
             user.Role = Roles.RestrictedUser;
             await _userRepository.UpdateAsync(user);
             return Unit.Value;
