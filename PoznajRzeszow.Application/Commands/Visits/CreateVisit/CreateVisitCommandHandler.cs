@@ -21,6 +21,7 @@ namespace PoznajRzeszow.Application.Commands.Visits.CreateVisit
 
         public async Task<VisitDto> Handle(CreateVisitCommand request, CancellationToken cancellationToken)
         {
+            //DateTime date = request.VisitDate;
             var visit = Visit.Create(request.VisitDate, request.UserId, request.PlaceId);
             await _visitRepository.CreateAsync(visit);
             return new VisitDto(visit.VisitId);

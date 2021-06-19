@@ -54,7 +54,7 @@ namespace PoznajRzeszow.API.Controllers
             }));
 
         [HttpGet("getRatingsStats/{days}")]
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> GetRatingsStats([FromRoute] int days)
             => Ok(await _mediator.Send(new GetRatingsStatsQuery
             {

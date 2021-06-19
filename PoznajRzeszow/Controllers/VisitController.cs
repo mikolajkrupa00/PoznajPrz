@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using PoznajRzeszow.Application.Queries.Visits.CheckIsVisited;
 using PoznajRzeszow.Application.Commands.Visits.CreateVisit;
 using PoznajRzeszow.Application.Queries.Visits.GetPlaceStats;
 using PoznajRzeszow.Application.Queries.Visits.GetStats;
@@ -47,6 +48,16 @@ namespace PoznajRzeszow.API.Controllers
             => Ok(await _mediator.Send(new GetStatsQuery
             {
                 Days = days
+            }));
+
+
+        [HttpGet("checkIsVisited/{placeId}/{userId}")]
+        //[Authorize(Roles = "User")]
+        public async Task<IActionResult> CheckIsVisited(Guid placeId, Guid userId)
+            => Ok(await _mediator.Send(new IsVisitedQuery
+            {
+                PlaceId = placeId,
+                UserId = userId
             }));
 
         [HttpPost]
