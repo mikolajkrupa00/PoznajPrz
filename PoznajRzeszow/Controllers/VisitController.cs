@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using PoznajRzeszow.Application.Commands.Visits.CreateVisit;
 using PoznajRzeszow.Application.Queries.Visits.GetPlaceStats;
 using PoznajRzeszow.Application.Queries.Visits.GetStats;
+using PoznajRzeszow.Application.Queries.Visits.GetVisitedPlaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,14 @@ namespace PoznajRzeszow.API.Controllers
         {
             _mediator = mediator;
         }
+
+        [HttpGet("getVisitedPlaces/{userId}")]
+        public async Task<IActionResult> GetVisitedPlaces(Guid userId)
+            => Ok(await _mediator.Send(new GetVisitedPlacesQuery
+            {
+                UserId = userId
+            }));
+
 
         [HttpGet("getStats/{placeId}/{days}")]
         [Authorize(Roles = "Admin")]
