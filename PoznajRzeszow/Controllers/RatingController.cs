@@ -7,6 +7,7 @@ using PoznajRzeszow.Application.Commands.Ratings.DeleteRating;
 using PoznajRzeszow.Application.Commands.Ratings.UpdateRating;
 using PoznajRzeszow.Application.Queries.Ratings.GetRatings;
 using PoznajRzeszow.Application.Queries.Ratings.GetRatingsStats;
+using PoznajRzeszow.Application.Queries.Ratings.GetStats;
 using PoznajRzeszow.Application.Queries.Ratings.GetRatedPlaces;
 using System;
 using System.Collections.Generic;
@@ -57,6 +58,14 @@ namespace PoznajRzeszow.API.Controllers
         //[Authorize]
         public async Task<IActionResult> GetRatingsStats([FromRoute] int days)
             => Ok(await _mediator.Send(new GetRatingsStatsQuery
+            {
+                Days = days
+            }));
+
+        [HttpGet("getStats/{days}")]
+        //[Authorize]
+        public async Task<IActionResult> GetStats([FromRoute] int days)
+            => Ok(await _mediator.Send(new GetStatsQuery
             {
                 Days = days
             }));

@@ -24,8 +24,8 @@ namespace PoznajRzeszow.Infrastructure.QueryHandlers.Visits
                       where v.VisitDate > DateTime.UtcNow.AddDays(-request.Days)
                       join p in _context.Places on v.PlaceId equals p.PlaceId into place
                       from pp in place.DefaultIfEmpty()
-                      group v by new { pp.PlaceId, pp.Name, pp.Address, pp.Description }  into visits
-                      select new StatsDto(visits.Key.PlaceId, visits.Count(), visits.Key.Name, visits.Key.Address, visits.Key.Description))
+                      group v by new { pp.PlaceId, pp.Name, pp.Address, pp.Description,pp.DirectoryPath,pp.MainPhoto }  into visits
+                      select new StatsDto(visits.Key.PlaceId, visits.Count(), visits.Key.Name, visits.Key.Address, visits.Key.Description, visits.Key.DirectoryPath, visits.Key.MainPhoto))
             .ToListAsync();
 
             //var x = await(from p in _context.Places
